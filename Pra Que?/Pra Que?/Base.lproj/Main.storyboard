@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,8 +17,55 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4h4-HT-bVB">
+                                <rect key="frame" x="277" y="423" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGW-Xd-gRR">
+                                <rect key="frame" x="268" y="319" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="CzR-pz-xn8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXY-JE-38g">
+                                <rect key="frame" x="268" y="245" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="CuE-hW-sRB">
+                                <rect key="frame" x="277" y="495" width="46" height="37"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.69411764710000001" green="0.63137254899999995" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="CuE-hW-sRB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="12c-mf-MhW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CuE-hW-sRB" secondAttribute="bottom" constant="68" id="2iP-5S-ubU"/>
+                            <constraint firstItem="CuE-hW-sRB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="255" id="AEx-uS-kzY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CuE-hW-sRB" secondAttribute="trailing" constant="266" id="C63-3Y-Nc4"/>
+                            <constraint firstItem="RGW-Xd-gRR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="268" id="DI9-gr-Pfn"/>
+                            <constraint firstItem="CuE-hW-sRB" firstAttribute="trailing" secondItem="4h4-HT-bVB" secondAttribute="trailing" id="O2Y-fX-w8K"/>
+                            <constraint firstItem="4h4-HT-bVB" firstAttribute="centerX" secondItem="CuE-hW-sRB" secondAttribute="centerX" id="gFv-iS-90t"/>
+                            <constraint firstItem="RGW-Xd-gRR" firstAttribute="centerY" secondItem="4h4-HT-bVB" secondAttribute="centerY" constant="-108.5" id="jnU-Et-izc"/>
+                            <constraint firstItem="RGW-Xd-gRR" firstAttribute="leading" secondItem="YXY-JE-38g" secondAttribute="leading" id="kln-YX-Aan"/>
+                            <constraint firstItem="RGW-Xd-gRR" firstAttribute="top" secondItem="YXY-JE-38g" secondAttribute="bottom" constant="53" id="rAF-kh-C86"/>
+                            <constraint firstItem="CuE-hW-sRB" firstAttribute="top" secondItem="4h4-HT-bVB" secondAttribute="bottom" constant="42" id="sB3-pS-jO2"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="AEx-uS-kzY"/>
+                                <exclude reference="C63-3Y-Nc4"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="currentMessage" destination="RGW-Xd-gRR" id="dac-HA-4xP"/>
+                        <outlet property="pageControl" destination="CuE-hW-sRB" id="ivM-Uk-Mn9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
