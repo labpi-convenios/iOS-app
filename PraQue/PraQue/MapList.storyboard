@@ -55,7 +55,6 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="contractName" destination="YWx-pm-hop" id="qVz-fh-gEp"/>
-                                            <outlet property="convenioNome" destination="YWx-pm-hop" id="uIE-1H-Zhb"/>
                                             <segue destination="X2u-Jz-x7f" kind="showDetail" id="9hE-s3-YtZ"/>
                                         </connections>
                                     </tableViewCell>

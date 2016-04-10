@@ -55,7 +55,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="fNJ-p7-u5G" kind="show" id="lss-3A-6bg"/>
+                                    <segue destination="0Cp-dw-eeN" kind="show" identifier="ShowTabBar" id="oAM-4k-hpc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -103,16 +103,16 @@
             </objects>
             <point key="canvasLocation" x="898" y="280"/>
         </scene>
-        <!--MapList-->
-        <scene sceneID="lOB-zb-yQ5">
+        <!--Main-->
+        <scene sceneID="jBg-vB-gWQ">
             <objects>
-                <viewControllerPlaceholder storyboardName="MapList" id="fNJ-p7-u5G" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Y9Q-sl-7JZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Main" id="0Cp-dw-eeN" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TOo-KD-zia" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="898" y="773"/>
+            <point key="canvasLocation" x="898" y="729"/>
         </scene>
     </scenes>
     <resources>
-        <image name="TelaInicialBG" width="45" height="37"/>
+        <image name="TelaInicialBG" width="1000" height="667"/>
     </resources>
 </document>
