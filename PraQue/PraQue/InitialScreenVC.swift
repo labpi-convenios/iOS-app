@@ -89,9 +89,10 @@ class InitialScreenVC: UIViewController {
         let verticalMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.y",
             type: .TiltAlongVerticalAxis)
         
-        verticalMotionEffect.minimumRelativeValue = -10
+        let parallaxMotion = 20
+        verticalMotionEffect.minimumRelativeValue = -(parallaxMotion)
         
-        verticalMotionEffect.maximumRelativeValue = 10
+        verticalMotionEffect.maximumRelativeValue = parallaxMotion
         
         
         
@@ -101,9 +102,9 @@ class InitialScreenVC: UIViewController {
             
             type: .TiltAlongHorizontalAxis)
         
-        horizontalMotionEffect.minimumRelativeValue = -10
+        horizontalMotionEffect.minimumRelativeValue = -(parallaxMotion)
         
-        horizontalMotionEffect.maximumRelativeValue = 10
+        horizontalMotionEffect.maximumRelativeValue = parallaxMotion
         
         
         

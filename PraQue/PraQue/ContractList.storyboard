@@ -86,7 +86,7 @@
             </objects>
             <point key="canvasLocation" x="1800" y="291"/>
         </scene>
-        <!--Contract DetailVC-->
+        <!--Title-->
         <scene sceneID="LHq-NN-EhE">
             <objects>
                 <viewController id="X2u-Jz-x7f" customClass="ContractDetailVC" customModule="PraQue" customModuleProvider="target" sceneMemberID="viewController">
@@ -107,11 +107,29 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="cb2-x3-ma9"/>
+                    <navigationItem key="navigationItem" title="Title" id="ee4-7Q-sgT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aLg-JI-49w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2560" y="304"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5aX-fn-Jni">
+            <objects>
+                <viewController id="a8I-Yk-AKC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Pq5-3E-ot9"/>
+                        <viewControllerLayoutGuide type="bottom" id="xZA-00-buc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rtd-CL-e1q">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MSV-dY-euk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3346" y="-254"/>
         </scene>
     </scenes>
 </document>
