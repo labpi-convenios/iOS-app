@@ -9,7 +9,7 @@
 import UIKit
 
 class ContractTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var contractName: UILabel!
     
     override func awakeFromNib() {
