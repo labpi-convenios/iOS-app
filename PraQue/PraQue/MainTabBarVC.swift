@@ -38,4 +38,14 @@ class MainTabBarVC: UITabBarController {
         return storyBoard!
     }
     
+    
+    
+    override func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {
+        let index = tabBar.items?.indexOf(item)
+        if index == 0{
+            let mapList = ContractListVC()
+            presentViewController(mapList, animated: true, completion: nil)
+        }
+    }
+        
 }

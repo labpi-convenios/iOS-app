@@ -18,7 +18,6 @@ class ContractListVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.map.delegate = self
         self.map.showsUserLocation = true;
         
