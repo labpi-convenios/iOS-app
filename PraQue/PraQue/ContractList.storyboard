@@ -164,14 +164,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cgn-h1-kzk">
-                                                    <rect key="frame" x="275" y="18" width="305" height="29"/>
+                                                    <rect key="frame" x="122.5" y="18" width="457.5" height="29"/>
                                                     <segments>
                                                         <segment title="Concluída"/>
                                                         <segment title="Não Concluído"/>
                                                     </segments>
                                                 </segmentedControl>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qual a situação do contrato?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WWx-vc-qE4">
-                                                    <rect key="frame" x="16" y="18" width="219" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Situação" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WWx-vc-qE4">
+                                                    <rect key="frame" x="16" y="18" width="66.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -199,11 +199,23 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ObraExemplo" translatesAutoresizingMaskIntoConstraints="NO" id="TLu-rQ-1Ft">
                                                     <rect key="frame" x="8" y="8" width="584" height="183.5"/>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0s9-g0-xbp">
+                                                    <rect key="frame" x="523" y="149" width="31" height="30"/>
+                                                    <color key="backgroundColor" red="0.34901960780000002" green="0.59999999999999998" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="Foto">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="takePicture:" destination="a8I-Yk-AKC" eventType="touchUpInside" id="YRd-86-BQh"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="TLu-rQ-1Ft" firstAttribute="leading" secondItem="qUp-rC-Hey" secondAttribute="leadingMargin" id="1Uq-lJ-XEn"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="TLu-rQ-1Ft" secondAttribute="bottom" id="2kP-9n-oef"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="TLu-rQ-1Ft" secondAttribute="trailing" id="GFb-bC-1e6"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="0s9-g0-xbp" secondAttribute="trailing" constant="38" id="Hs2-7l-5jB"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="0s9-g0-xbp" secondAttribute="bottom" constant="12.5" id="MQc-e6-BtH"/>
                                                 <constraint firstItem="TLu-rQ-1Ft" firstAttribute="top" secondItem="qUp-rC-Hey" secondAttribute="topMargin" id="vEV-Qq-6rD"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -233,7 +245,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="128" id="mGj-ma-1Z8"/>
                                                     </constraints>
-                                                    <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
