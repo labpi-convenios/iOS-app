@@ -13,12 +13,13 @@ class InitialScreenVC: UIViewController {
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var currentMessage: UILabel!
     @IBOutlet var viewParallax: UIView!
+    @IBOutlet weak var imageBG: UIImageView!
     
     // create swipe
     let swipeLeft = UISwipeGestureRecognizer()
     let swipeRight = UISwipeGestureRecognizer()
     
-    
+    let imageArray = ["BG", "TelaInicialBG","BG"]
     
     //index array
     var currentIndex: Int = 0
@@ -75,6 +76,8 @@ class InitialScreenVC: UIViewController {
         print(index)
         
         let messages = ["Teste 01","Teste 02", "Teste 03"]
+        
+        self.imageBG.image = UIImage(named: self.imageArray[index])
         
         self.currentMessage.text = messages[index]
         

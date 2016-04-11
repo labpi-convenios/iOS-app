@@ -17,32 +17,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TelaInicialBG" translatesAutoresizingMaskIntoConstraints="NO" id="EIV-2m-tu0">
+                            <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG" translatesAutoresizingMaskIntoConstraints="NO" id="EIV-2m-tu0">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="CuE-hW-sRB">
-                                <rect key="frame" x="281" y="495" width="39" height="37"/>
+                                <rect key="frame" x="280" y="495" width="39" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="KXf-xX-Ya9"/>
                                 </constraints>
                             </pageControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGW-Xd-gRR">
-                                <rect key="frame" x="279" y="319" width="42" height="21"/>
+                                <rect key="frame" x="254" y="319" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXY-JE-38g">
-                                <rect key="frame" x="279" y="245" width="42" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="r3J-3R-M5L"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.098039215686274508" green="0.2196078431372549" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4h4-HT-bVB">
-                                <rect key="frame" x="182" y="421" width="211" height="30"/>
+                                <rect key="frame" x="181" y="421" width="213" height="30"/>
                                 <color key="backgroundColor" red="0.062745098040000002" green="0.4823529412" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Wcj-If-KIN"/>
@@ -67,6 +58,15 @@
                                     <segue destination="0Cp-dw-eeN" kind="show" identifier="ShowTabBar" id="oAM-4k-hpc"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fiscalize" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXY-JE-38g">
+                                <rect key="frame" x="254" y="245" width="92" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="r3J-3R-M5L"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                <color key="textColor" red="0.098039215690000001" green="0.21960784310000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.69411764710000001" green="0.63137254899999995" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -104,6 +104,7 @@
                     </view>
                     <connections>
                         <outlet property="currentMessage" destination="RGW-Xd-gRR" id="dac-HA-4xP"/>
+                        <outlet property="imageBG" destination="EIV-2m-tu0" id="dIb-MV-ShX"/>
                         <outlet property="pageControl" destination="CuE-hW-sRB" id="ivM-Uk-Mn9"/>
                         <outlet property="viewParallax" destination="8bC-Xf-vdC" id="6gk-iQ-9Fs"/>
                     </connections>
@@ -122,6 +123,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="TelaInicialBG" width="1000" height="667"/>
+        <image name="BG" width="1700" height="1065"/>
     </resources>
 </document>
