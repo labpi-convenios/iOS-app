@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		674326271CBAE05100312DDC /* ReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674326261CBAE05100312DDC /* ReportVC.swift */; };
 		93054AE71CBA7B6D0050D185 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93054AE61CBA7B6D0050D185 /* AppDelegate.swift */; };
 		93054AEE1CBA7B6D0050D185 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93054AED1CBA7B6D0050D185 /* Assets.xcassets */; };
 		93054AF11CBA7B6D0050D185 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93054AEF1CBA7B6D0050D185 /* LaunchScreen.storyboard */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		674326261CBAE05100312DDC /* ReportVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportVC.swift; sourceTree = "<group>"; };
 		93054AE31CBA7B6D0050D185 /* PraQue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PraQue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93054AE61CBA7B6D0050D185 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93054AED1CBA7B6D0050D185 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				9337CAB51CBA90E20073C82C /* InitialScreenVC.swift */,
 				9337CAB71CBA91180073C82C /* ContractListVC.swift */,
 				9337CAB91CBA915E0073C82C /* ContractDetailVC.swift */,
+				674326261CBAE05100312DDC /* ReportVC.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				674326271CBAE05100312DDC /* ReportVC.swift in Sources */,
 				9337CABA1CBA915E0073C82C /* ContractDetailVC.swift in Sources */,
 				9337CABC1CBA91A20073C82C /* ContractTableViewCell.swift in Sources */,
 				9337CAB61CBA90E20073C82C /* InitialScreenVC.swift in Sources */,

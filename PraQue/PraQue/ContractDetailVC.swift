@@ -45,7 +45,7 @@ class ContractDetailVC: UIViewController, UINavigationControllerDelegate {
         
         //chama a funcao report
         let reportAction: UIAlertAction = UIAlertAction(title: "Relato", style: .Default) { action -> Void in
-//            self.report()
+            self.report()
         }
         actionSheetController.addAction(reportAction)
         
@@ -64,6 +64,13 @@ class ContractDetailVC: UIViewController, UINavigationControllerDelegate {
         
         //Present the AlertController
         self.presentViewController(actionSheetController, animated: true, completion: nil)
+    }
+    
+    func report() {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "ContractList", bundle: nil)
+        
+        let reportViewController = storyBoard.instantiateViewControllerWithIdentifier("Report") as! ReportVC
+        self.presentViewController(reportViewController, animated: true, completion: nil)
     }
     
 

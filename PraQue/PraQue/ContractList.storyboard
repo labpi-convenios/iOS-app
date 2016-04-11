@@ -113,10 +113,10 @@
             </objects>
             <point key="canvasLocation" x="2560" y="304"/>
         </scene>
-        <!--View Controller-->
+        <!--ReportVC-->
         <scene sceneID="5aX-fn-Jni">
             <objects>
-                <viewController id="a8I-Yk-AKC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Report" id="a8I-Yk-AKC" customClass="ReportVC" customModule="PraQue" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Pq5-3E-ot9"/>
                         <viewControllerLayoutGuide type="bottom" id="xZA-00-buc"/>
@@ -124,7 +124,34 @@
                     <view key="view" contentMode="scaleToFill" id="Rtd-CL-e1q">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dBZ-rq-m8I">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="vPd-Ci-JWZ"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Title" id="r5h-ZD-XsO">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="NeR-Ju-AYL">
+                                            <connections>
+                                                <action selector="cancelButton:" destination="a8I-Yk-AKC" id="YfX-2x-7sr"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="NOn-KD-9QD">
+                                            <connections>
+                                                <action selector="doneButton:" destination="a8I-Yk-AKC" id="EAz-z7-ckw"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dBZ-rq-m8I" firstAttribute="leading" secondItem="Rtd-CL-e1q" secondAttribute="leading" id="Djr-Yp-9Yz"/>
+                            <constraint firstItem="dBZ-rq-m8I" firstAttribute="top" secondItem="Rtd-CL-e1q" secondAttribute="top" id="KWH-Ua-8vA"/>
+                            <constraint firstAttribute="trailing" secondItem="dBZ-rq-m8I" secondAttribute="trailing" id="yFn-q0-YhZ"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MSV-dY-euk" userLabel="First Responder" sceneMemberID="firstResponder"/>
