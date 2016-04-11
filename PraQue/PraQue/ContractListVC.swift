@@ -61,10 +61,5 @@ class ContractListVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, 
         return cell
     }
     
-//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        let detailViewController = ContractDetailVC()
-//        presentViewController(detailViewController, animated: true, completion: nil)
-//    }
-
 
 }
