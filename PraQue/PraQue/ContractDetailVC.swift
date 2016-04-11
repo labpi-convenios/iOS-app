@@ -39,7 +39,7 @@ class ContractDetailVC: UIViewController, UINavigationControllerDelegate {
         
         //chama a funcao share
         let shareAction: UIAlertAction = UIAlertAction(title: "Compartilhar", style: .Default) { action -> Void in
-//            self.share()
+            self.shareSheet()
         }
         actionSheetController.addAction(shareAction)
         
@@ -84,15 +84,30 @@ class ContractDetailVC: UIViewController, UINavigationControllerDelegate {
     
     
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    //share options
+    func shareSheet(){
+    
+        let firstActivityItem = ""
+        let secondActivityItem : NSURL = NSURL(string: "URL")!
+        // If you want to put an image
+        let image : UIImage = UIImage(named: "ObraExemplo")!
+        
+        let activityViewController : UIActivityViewController = UIActivityViewController(
+            activityItems: [firstActivityItem, secondActivityItem, image], applicationActivities: nil)
+        
+        // Anything you want to exclude
+        activityViewController.excludedActivityTypes = [
+            UIActivityTypePostToWeibo,
+            UIActivityTypeAssignToContact,
+            UIActivityTypeAddToReadingList,
+            UIActivityTypePostToTencentWeibo
+        ]
+        
+        self.presentViewController(activityViewController, animated: true, completion: nil)
+    
     }
-    */
+    
+
 
 }
