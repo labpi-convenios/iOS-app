@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Contract ListVC-->
@@ -84,7 +85,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PKd-lr-Mqr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1800" y="291"/>
+            <point key="canvasLocation" x="1680" y="-254"/>
         </scene>
         <!--Title-->
         <scene sceneID="LHq-NN-EhE">
@@ -111,7 +112,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aLg-JI-49w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2560" y="291"/>
+            <point key="canvasLocation" x="2504" y="-254"/>
         </scene>
         <!--ReportVC-->
         <scene sceneID="5aX-fn-Jni">
@@ -131,7 +132,7 @@
                                     <constraint firstAttribute="height" constant="65" id="vPd-Ci-JWZ"/>
                                 </constraints>
                                 <items>
-                                    <navigationItem title="Title" id="r5h-ZD-XsO">
+                                    <navigationItem title="Relato" id="r5h-ZD-XsO">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="NeR-Ju-AYL">
                                             <connections>
                                                 <action selector="cancelButton:" destination="a8I-Yk-AKC" id="YfX-2x-7sr"/>
@@ -145,18 +146,130 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="dbX-Ja-7jo">
+                                <rect key="frame" x="0.0" y="65" width="600" height="535"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellContractStatus" rowHeight="100" id="3vN-P3-nIh" customClass="ReportTableViewCell" customModule="PraQue" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="49.5" width="600" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3vN-P3-nIh" id="4Bo-kK-Cx6">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cgn-h1-kzk">
+                                                    <rect key="frame" x="275" y="18" width="305" height="29"/>
+                                                    <segments>
+                                                        <segment title="Concluída"/>
+                                                        <segment title="Não Concluído"/>
+                                                    </segments>
+                                                </segmentedControl>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qual a situação do contrato?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WWx-vc-qE4">
+                                                    <rect key="frame" x="16" y="18" width="219" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="WWx-vc-qE4" firstAttribute="leading" secondItem="4Bo-kK-Cx6" secondAttribute="leadingMargin" constant="8" id="Pwe-SI-5a5"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="cgn-h1-kzk" secondAttribute="trailing" constant="12" id="WRU-DJ-6Mo"/>
+                                                <constraint firstItem="cgn-h1-kzk" firstAttribute="leading" secondItem="WWx-vc-qE4" secondAttribute="trailing" constant="40" id="aFC-fL-ZDB"/>
+                                                <constraint firstItem="cgn-h1-kzk" firstAttribute="top" secondItem="4Bo-kK-Cx6" secondAttribute="topMargin" constant="10" id="fDh-MH-2CD"/>
+                                                <constraint firstItem="WWx-vc-qE4" firstAttribute="top" secondItem="4Bo-kK-Cx6" secondAttribute="topMargin" constant="10" id="yEf-Cd-ekd"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="segmentControl" destination="cgn-h1-kzk" id="hV6-ST-k16"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellImage" rowHeight="200" id="rsH-1k-yBh" customClass="ReportTableViewCell" customModule="PraQue" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="149.5" width="600" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rsH-1k-yBh" id="qUp-rC-Hey">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="199.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ObraExemplo" translatesAutoresizingMaskIntoConstraints="NO" id="TLu-rQ-1Ft">
+                                                    <rect key="frame" x="8" y="8" width="584" height="183.5"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="TLu-rQ-1Ft" firstAttribute="leading" secondItem="qUp-rC-Hey" secondAttribute="leadingMargin" id="1Uq-lJ-XEn"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="TLu-rQ-1Ft" secondAttribute="bottom" id="2kP-9n-oef"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="TLu-rQ-1Ft" secondAttribute="trailing" id="GFb-bC-1e6"/>
+                                                <constraint firstItem="TLu-rQ-1Ft" firstAttribute="top" secondItem="qUp-rC-Hey" secondAttribute="topMargin" id="vEV-Qq-6rD"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageReport" destination="TLu-rQ-1Ft" id="hVB-gA-ok2"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellReport" rowHeight="300" id="qvG-ug-grc" customClass="ReportTableViewCell" customModule="PraQue" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="349.5" width="600" height="300"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qvG-ug-grc" id="pJd-Us-V2m">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="299.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escreva seu relato sobre o contrato:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcM-6m-LDQ">
+                                                    <rect key="frame" x="8" y="8" width="275" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="479-TZ-eQ6"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="phD-Am-WMT">
+                                                    <rect key="frame" x="0.0" y="37" width="542" height="128"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="128" id="mGj-ma-1Z8"/>
+                                                    </constraints>
+                                                    <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="phD-Am-WMT" firstAttribute="leading" secondItem="pJd-Us-V2m" secondAttribute="leading" id="58x-7E-2so"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="phD-Am-WMT" secondAttribute="trailing" constant="50" id="AA3-ik-wTy"/>
+                                                <constraint firstItem="qcM-6m-LDQ" firstAttribute="top" secondItem="pJd-Us-V2m" secondAttribute="topMargin" id="Ijy-0L-A6j"/>
+                                                <constraint firstItem="phD-Am-WMT" firstAttribute="top" secondItem="qcM-6m-LDQ" secondAttribute="bottom" constant="8" symbolic="YES" id="SFm-el-Hdo"/>
+                                                <constraint firstItem="qcM-6m-LDQ" firstAttribute="leading" secondItem="pJd-Us-V2m" secondAttribute="leadingMargin" id="ueF-a5-1yF"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="textViewReport" destination="phD-Am-WMT" id="1Jn-TL-i5o"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="a8I-Yk-AKC" id="KKC-X3-7nY"/>
+                                    <outlet property="delegate" destination="a8I-Yk-AKC" id="t2H-Lq-mUo"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="dbX-Ja-7jo" firstAttribute="top" secondItem="dBZ-rq-m8I" secondAttribute="bottom" id="7bh-0h-Mwf"/>
                             <constraint firstItem="dBZ-rq-m8I" firstAttribute="leading" secondItem="Rtd-CL-e1q" secondAttribute="leading" id="Djr-Yp-9Yz"/>
-                            <constraint firstItem="dBZ-rq-m8I" firstAttribute="top" secondItem="Rtd-CL-e1q" secondAttribute="top" id="KWH-Ua-8vA"/>
+                            <constraint firstItem="dbX-Ja-7jo" firstAttribute="leading" secondItem="dBZ-rq-m8I" secondAttribute="leading" id="WMV-4f-Dkj"/>
+                            <constraint firstItem="xZA-00-buc" firstAttribute="top" secondItem="dbX-Ja-7jo" secondAttribute="bottom" id="uOc-43-0Ub"/>
+                            <constraint firstItem="dbX-Ja-7jo" firstAttribute="trailing" secondItem="dBZ-rq-m8I" secondAttribute="trailing" id="wNr-ZY-NRp"/>
                             <constraint firstAttribute="trailing" secondItem="dBZ-rq-m8I" secondAttribute="trailing" id="yFn-q0-YhZ"/>
+                            <constraint firstItem="dBZ-rq-m8I" firstAttribute="top" secondItem="Rtd-CL-e1q" secondAttribute="top" id="ziA-iN-0tR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="dbX-Ja-7jo" id="886-yg-Lv7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MSV-dY-euk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3346" y="-254"/>
+            <point key="canvasLocation" x="3290" y="-254"/>
         </scene>
         <!--For WhatVC-->
         <scene sceneID="uO0-6T-LQd">
@@ -204,4 +317,7 @@
             <point key="canvasLocation" x="4048" y="-254"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ObraExemplo" width="318" height="158"/>
+    </resources>
 </document>

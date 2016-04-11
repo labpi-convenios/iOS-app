@@ -21,6 +21,7 @@
 		9337CAB81CBA91180073C82C /* ContractListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9337CAB71CBA91180073C82C /* ContractListVC.swift */; };
 		9337CABA1CBA915E0073C82C /* ContractDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9337CAB91CBA915E0073C82C /* ContractDetailVC.swift */; };
 		9337CABC1CBA91A20073C82C /* ContractTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9337CABB1CBA91A20073C82C /* ContractTableViewCell.swift */; };
+		9382CB231CBBDB4F0011569D /* ReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9382CB221CBBDB4F0011569D /* ReportTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		9337CAB71CBA91180073C82C /* ContractListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractListVC.swift; sourceTree = "<group>"; };
 		9337CAB91CBA915E0073C82C /* ContractDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractDetailVC.swift; sourceTree = "<group>"; };
 		9337CABB1CBA91A20073C82C /* ContractTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractTableViewCell.swift; sourceTree = "<group>"; };
+		9382CB221CBBDB4F0011569D /* ReportTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				9337CAAF1CBA8DB70073C82C /* ContractList.storyboard */,
 				9337CAB21CBA8EFC0073C82C /* InitialScreen.storyboard */,
 				9337CABB1CBA91A20073C82C /* ContractTableViewCell.swift */,
+				9382CB221CBBDB4F0011569D /* ReportTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9382CB231CBBDB4F0011569D /* ReportTableViewCell.swift in Sources */,
 				674326271CBAE05100312DDC /* ReportVC.swift in Sources */,
 				9337CABA1CBA915E0073C82C /* ContractDetailVC.swift in Sources */,
 				9337CABC1CBA91A20073C82C /* ContractTableViewCell.swift in Sources */,
