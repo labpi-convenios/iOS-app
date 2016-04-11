@@ -14,7 +14,22 @@ class ContractListVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, 
     @IBOutlet weak var map: MKMapView!
     
     // Array de testes
-    var convenios = ["a", "b", "c"]
+    var convenios = [
+        [
+            "NM_PROGRAMA":"Resíduos Sólidos Urbanos",
+            "TX_OBJETO_CONVENIO":"Ampliação do Barracão de Coleta Seletiva de Lixo do Municipio de Paranavaí"
+        ],
+        [
+            "NM_PROGRAMA":"Turismo Social no Brasil: Uma Viagem de Inclusão - Convênios",
+            "TX_OBJETO_CONVENIO":"Empreitada global para reforma e recuperação das Igrejas em estilo Gótico do Interior do Municipio de Sananduva"
+        ],
+        [
+            "NM_PROGRAMA":"FOMENTO AO DESENVOLVIMENTO TURÍSTICO LOCAL  EMENDAS",
+            "TX_OBJETO_CONVENIO":"1º Encontro Nacional de Radiomadores - DF"
+        ]
+    ]
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +56,7 @@ class ContractListVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, 
         
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! ContractTableViewCell
         
-        cell.contractName.text = convenios[indexPath.row]
+        cell.contractName.text = convenios[indexPath.row]["NM_PROGRAMA"]
         
         return cell
     }
