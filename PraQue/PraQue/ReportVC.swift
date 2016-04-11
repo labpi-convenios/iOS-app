@@ -8,11 +8,11 @@
 
 import UIKit
 
-class ReportVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ReportVC: UIViewController, UITableViewDataSource, UITableViewDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
-    
+    var imageReport = UIImage(named: "TelaInicialBG")
     
     
     override func viewDidLoad() {
@@ -50,6 +50,7 @@ class ReportVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             
         case 1:
             cell = tableView.dequeueReusableCellWithIdentifier(self.returnIdentifier(indexPath.row), forIndexPath: indexPath) as! ReportTableViewCell
+            cell.imageReport.image = self.imageReport
 
         case 2:
              cell = tableView.dequeueReusableCellWithIdentifier(self.returnIdentifier(indexPath.row), forIndexPath: indexPath) as! ReportTableViewCell
@@ -88,5 +89,107 @@ class ReportVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         return cellIdentifier
         
     }
+    
+    
+    @IBAction func takePicture(sender: AnyObject) {
+        
+        self.editPicture()
+        
+    }
+    
+    
+    
+    func editPicture(){
+        
+        //criando AlertController
+        let actionSheetController: UIAlertController = UIAlertController(title: "Foto", message: "Selecione a opção", preferredStyle: .ActionSheet)
+        
+        //cancelar a ação
+        let cancelAction: UIAlertAction = UIAlertAction(title: "Cancelar", style: .Cancel) { action -> Void in
+            
+        }
+        actionSheetController.addAction(cancelAction)
+        
+        //chama a funcao tirar foto
+        let takePictureAction: UIAlertAction = UIAlertAction(title: "Tirar Foto", style: .Default) { action -> Void in
+            self.takePicture()
+        }
+        actionSheetController.addAction(takePictureAction)
+        
+        //chama funcao escolher da biblioteca
+        let choosePictureAction: UIAlertAction = UIAlertAction(title: "Escolher da biblioteca", style: .Default) { action -> Void in
+            self.chooseLibrary()
+        }
+        actionSheetController.addAction(choosePictureAction)
+        
+        //Present the AlertController
+        self.presentViewController(actionSheetController, animated: true, completion: nil)
+        
+    }
+    
+    
+    
+    //tirar foto
+    func takePicture(){
+        
+        let imagePicker = UIImagePickerController()
+        
+        if UIImagePickerController.isSourceTypeAvailable(.Camera){
+            
+            imagePicker.sourceType = .Camera;
+            imagePicker.delegate = self
+            imagePicker.allowsEditing = true //permitir a edição
+        }
+        
+        self.tableView.reloadData()
+        presentViewController(imagePicker, animated: true, completion: nil)
+    }
+    
+    
+    //escolher foto da biblioteca
+    func chooseLibrary() {
+        
+        let imagePicker = UIImagePickerController()
+        
+        if UIImagePickerController.isSourceTypeAvailable(.PhotoLibrary){
+            
+            imagePicker.sourceType = .PhotoLibrary
+            imagePicker.delegate = self
+            imagePicker.allowsEditing = true //permitir a edição
+        }
+        presentViewController(imagePicker, animated: true, completion: nil)
+    }
+    
+    
+    
+    //seleciona a foto capturada e coloca na image view
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        
+        let image = info[UIImagePickerControllerEditedImage] as! UIImage
+        
+        self.imageReport = image;
+        
+        dismissViewControllerAnimated(true, completion: nil)
+        
+        self.isEdittingProfile()
+        self.tableView.reloadData()
+        self.view.endEditing(true)
+        
+    }
 
+    
+    
+    func isEdittingProfile(){
+        let rightBarButton = UIBarButtonItem(title: "Concluir", style: UIBarButtonItemStyle.Done, target: self, action: Selector("doneEditProfile"))
+        
+        rightBarButton.tintColor = UIColor.whiteColor()
+        self.navigationItem.rightBarButtonItem = rightBarButton
+        
+    }
+    
+    func doneEditProfile(){
+        self.view.endEditing(true)
+        
+    }
+    
 }

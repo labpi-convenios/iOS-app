@@ -2,7 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="KbL-zo-YIU">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--ListContracts-->
@@ -24,25 +25,6 @@
             </objects>
             <point key="canvasLocation" x="-125" y="973"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="22q-hP-efp">
-            <objects>
-                <viewController id="zP8-qb-shg" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Kxz-Re-GGQ"/>
-                        <viewControllerLayoutGuide type="bottom" id="ZT0-xy-90c"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="eVv-2o-Qf1">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="VSa-X1-Ftc"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KTr-ui-4i8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="847" y="1865"/>
-        </scene>
         <!--Item-->
         <scene sceneID="LRB-3d-Xu1">
             <objects>
@@ -55,55 +37,17 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="zP8-qb-shg" kind="relationship" relationship="rootViewController" id="cae-qY-ZeA"/>
+                        <segue destination="AmB-4P-Dgg" kind="relationship" relationship="rootViewController" id="cae-qY-ZeA"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yG2-xb-EsN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="847" y="985"/>
+            <point key="canvasLocation" x="1295" y="1001"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="t8b-HN-khk">
-            <objects>
-                <viewController id="MX4-zL-a6X" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="43Q-4s-9dc"/>
-                        <viewControllerLayoutGuide type="bottom" id="lJ0-4N-h8F"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="403-8c-KB2">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="kvz-DC-QrR"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="en6-X6-B3M" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1651" y="1845"/>
-        </scene>
-        <!--Item-->
-        <scene sceneID="uOk-xR-GVa">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fuA-sL-Xyi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="o3O-Nk-FMr"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="o41-jB-gr1">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="MX4-zL-a6X" kind="relationship" relationship="rootViewController" id="pJS-io-aLG"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ixu-5L-6N6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1651" y="985"/>
-        </scene>
-        <!--View Controller-->
+        <!--AboutVC-->
         <scene sceneID="XMo-SD-38H">
             <objects>
-                <viewController id="4Ag-WY-tY2" sceneMemberID="viewController">
+                <viewController id="4Ag-WY-tY2" customClass="AboutVC" customModule="PraQue" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XdW-46-fQO"/>
                         <viewControllerLayoutGuide type="bottom" id="Ve2-O7-xxh"/>
@@ -111,13 +55,46 @@
                     <view key="view" contentMode="scaleToFill" id="Jds-OG-Z4k">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Praque?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMQ-QZ-Bxu">
+                                <rect key="frame" x="269" y="120" width="63" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="chQ-sy-Do7">
+                                <rect key="frame" x="189" y="184" width="223" height="29"/>
+                                <segments>
+                                    <segment title="Convênios"/>
+                                    <segment title="Porque Ficalizar"/>
+                                </segments>
+                            </segmentedControl>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="wId-2u-Caj">
+                                <rect key="frame" x="6" y="220" width="588" height="313"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fMQ-QZ-Bxu" firstAttribute="top" secondItem="XdW-46-fQO" secondAttribute="bottom" constant="56" id="DuE-jU-35n"/>
+                            <constraint firstItem="chQ-sy-Do7" firstAttribute="top" secondItem="fMQ-QZ-Bxu" secondAttribute="bottom" constant="43" id="Lop-hO-aZi"/>
+                            <constraint firstItem="chQ-sy-Do7" firstAttribute="centerX" secondItem="Jds-OG-Z4k" secondAttribute="centerX" id="aiN-OD-bDh"/>
+                            <constraint firstItem="wId-2u-Caj" firstAttribute="top" secondItem="chQ-sy-Do7" secondAttribute="bottom" constant="8" id="b7M-dK-cDR"/>
+                            <constraint firstItem="chQ-sy-Do7" firstAttribute="top" secondItem="Jds-OG-Z4k" secondAttribute="top" constant="184" id="bLc-3K-m8Q"/>
+                            <constraint firstItem="chQ-sy-Do7" firstAttribute="centerX" secondItem="fMQ-QZ-Bxu" secondAttribute="centerX" id="ieB-Ml-FQL"/>
+                            <constraint firstItem="wId-2u-Caj" firstAttribute="leading" secondItem="Jds-OG-Z4k" secondAttribute="leadingMargin" constant="-14" id="kKA-Pw-NLI"/>
+                            <constraint firstItem="Ve2-O7-xxh" firstAttribute="top" secondItem="wId-2u-Caj" secondAttribute="bottom" constant="18" id="sLw-hs-JKI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wId-2u-Caj" secondAttribute="trailing" constant="-14" id="wo0-ZF-NWh"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="E3w-OW-9KZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Utv-4j-F1p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2555" y="1909"/>
+            <point key="canvasLocation" x="2779" y="1789"/>
         </scene>
         <!--Item-->
         <scene sceneID="MvG-yw-ymP">
@@ -136,7 +113,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YNR-Wk-WKS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2555" y="985"/>
+            <point key="canvasLocation" x="2779" y="965"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="kVj-hE-uHK">
@@ -150,7 +127,6 @@
                     <connections>
                         <segue destination="shh-bz-qap" kind="relationship" relationship="viewControllers" id="jjK-ez-4zT"/>
                         <segue destination="0FU-3r-N0M" kind="relationship" relationship="viewControllers" id="3fX-rM-Lir"/>
-                        <segue destination="fuA-sL-Xyi" kind="relationship" relationship="viewControllers" id="hk0-Qs-oyr"/>
                         <segue destination="Lv7-Ic-a4U" kind="relationship" relationship="viewControllers" id="Hqy-Cx-h9A"/>
                     </connections>
                 </tabBarController>
@@ -167,6 +143,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wlw-2N-BwG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-125" y="1845"/>
+        </scene>
+        <!--FavoriteContracts-->
+        <scene sceneID="Lbk-tW-pfv">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FavoriteContracts" id="AmB-4P-Dgg" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Bjx-vG-tgn"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YwY-WL-1FO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1303" y="1801"/>
         </scene>
     </scenes>
     <resources>
