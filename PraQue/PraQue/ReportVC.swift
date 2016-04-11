@@ -140,8 +140,11 @@ class ReportVC: UIViewController, UITableViewDataSource, UITableViewDelegate,UII
             imagePicker.delegate = self
             imagePicker.allowsEditing = true //permitir a edição
         }
+        
+        self.tableView.reloadData()
         presentViewController(imagePicker, animated: true, completion: nil)
     }
+    
     
     //escolher foto da biblioteca
     func chooseLibrary() {
@@ -156,6 +159,8 @@ class ReportVC: UIViewController, UITableViewDataSource, UITableViewDelegate,UII
         }
         presentViewController(imagePicker, animated: true, completion: nil)
     }
+    
+    
     
     //seleciona a foto capturada e coloca na image view
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
@@ -172,6 +177,7 @@ class ReportVC: UIViewController, UITableViewDataSource, UITableViewDelegate,UII
         
     }
 
+    
     
     func isEdittingProfile(){
         let rightBarButton = UIBarButtonItem(title: "Concluir", style: UIBarButtonItemStyle.Done, target: self, action: Selector("doneEditProfile"))
