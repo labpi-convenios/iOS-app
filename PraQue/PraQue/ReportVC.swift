@@ -61,7 +61,7 @@ class ReportVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     }
     
-    
+    // Por na classe utility
     func returnIdentifier(rowIndex: Int) -> String{
     
         var cellIdentifier = String()

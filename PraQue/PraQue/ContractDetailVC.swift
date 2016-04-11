@@ -8,11 +8,14 @@
 
 import UIKit
 
-class ContractDetailVC: UIViewController, UINavigationControllerDelegate {
+class ContractDetailVC: UIViewController, UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        self.tableView.rowHeight = 240
         self.optionButton()
 
         // Do any additional setup after loading the view.
@@ -82,9 +85,6 @@ class ContractDetailVC: UIViewController, UINavigationControllerDelegate {
         self.presentViewController(viewController, animated: true, completion: nil)
     }
     
-    
-    
-    
     //share options
     func shareSheet(){
     
@@ -105,9 +105,40 @@ class ContractDetailVC: UIViewController, UINavigationControllerDelegate {
         ]
         
         self.presentViewController(activityViewController, animated: true, completion: nil)
-    
+
     }
     
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        var cell = UITableViewCell()
+        
+        switch indexPath.row {
+        case 0:
+            cell = tableView.dequeueReusableCellWithIdentifier("dataCell", forIndexPath: indexPath)
+        case 1:
+            cell = tableView.dequeueReusableCellWithIdentifier("descriptionCell", forIndexPath: indexPath)
+        case 2:
+            cell = tableView.dequeueReusableCellWithIdentifier("goalCell", forIndexPath: indexPath)
+        default:
+            assert(false, "TableView da Detail com erro na hora de criar a célula")
+        }
+        
+        return cell
+    }
 
-
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return UIView.init(frame: CGRectZero)
+    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 0
+    }
 }
