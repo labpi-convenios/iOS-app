@@ -9,6 +9,7 @@
 import UIKit
 
 class FavoriteContractsTableViewCell: UITableViewCell {
+    @IBOutlet weak var favoriteContractName: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

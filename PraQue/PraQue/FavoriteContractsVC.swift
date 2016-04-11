@@ -8,7 +8,10 @@
 
 import UIKit
 
-class FavoriteContractsVC: UIViewController {
+class FavoriteContractsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    
+    @IBOutlet var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,14 +25,21 @@ class FavoriteContractsVC: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
     }
-    */
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return ContractListVC.convenios.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("FavoriteCell", forIndexPath: indexPath) as! FavoriteContractsTableViewCell
+        
+        cell.favoriteContractName.text = ContractListVC.convenios[indexPath.row]["NM_PROGRAMA"]
+        
+        return cell
+    }
 
 }

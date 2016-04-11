@@ -14,7 +14,7 @@ class ContractListVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, 
     @IBOutlet weak var map: MKMapView!
     
     // Array de testes
-    var convenios = [
+   static var convenios = [
         [
             "NM_PROGRAMA":"Resíduos Sólidos Urbanos",
             "TX_OBJETO_CONVENIO":"Ampliação do Barracão de Coleta Seletiva de Lixo do Municipio de Paranavaí"
@@ -49,14 +49,14 @@ class ContractListVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, 
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return convenios.count
+        return ContractListVC.convenios.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! ContractTableViewCell
         
-        cell.contractName.text = convenios[indexPath.row]["NM_PROGRAMA"]
+        cell.contractName.text = ContractListVC.convenios[indexPath.row]["NM_PROGRAMA"]
         
         return cell
     }
