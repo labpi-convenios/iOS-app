@@ -45,7 +45,7 @@ class ContractDetailVC: UIViewController, UINavigationControllerDelegate {
         
         //chama a funcao report
         let reportAction: UIAlertAction = UIAlertAction(title: "Relato", style: .Default) { action -> Void in
-            self.report()
+            self.presentView("Report")
         }
         actionSheetController.addAction(reportAction)
         
@@ -57,7 +57,7 @@ class ContractDetailVC: UIViewController, UINavigationControllerDelegate {
         
         //chama funcao forWhat
         let forWhatAction: UIAlertAction = UIAlertAction(title: "Pra quê?", style: .Default) { action -> Void in
-//            self.forWhat()
+            self.presentView("ForWhat")
         }
         actionSheetController.addAction(forWhatAction)
         
@@ -66,12 +66,23 @@ class ContractDetailVC: UIViewController, UINavigationControllerDelegate {
         self.presentViewController(actionSheetController, animated: true, completion: nil)
     }
     
-    func report() {
+    func presentView(name: String) {
         let storyBoard : UIStoryboard = UIStoryboard(name: "ContractList", bundle: nil)
+        var viewController = storyBoard.instantiateViewControllerWithIdentifier(name)
         
-        let reportViewController = storyBoard.instantiateViewControllerWithIdentifier("Report") as! ReportVC
-        self.presentViewController(reportViewController, animated: true, completion: nil)
+        switch name {
+        case "Report":
+            viewController = viewController as! ReportVC
+        case "ForWhat":
+            viewController = viewController as! ForWhatVC
+        default:
+            assert(false, "Não foi possível instanciar uma view nos detelhes do contrato")
+        }
+        
+        self.presentViewController(viewController, animated: true, completion: nil)
     }
+    
+    
     
 
     /*
