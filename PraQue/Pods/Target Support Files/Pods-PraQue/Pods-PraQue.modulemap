@@ -1,0 +1,6 @@
+framework module Pods_PraQue {
+  umbrella header "Pods-PraQue-umbrella.h"
+
+  export *
+  module * { export * }
+}
