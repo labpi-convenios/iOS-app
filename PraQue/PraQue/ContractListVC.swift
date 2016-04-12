@@ -35,6 +35,8 @@ class ContractListVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, 
     
     
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.map.delegate = self
@@ -44,14 +46,41 @@ class ContractListVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, 
         
         let data = NSData(contentsOfFile: sourcePath!)
         
-        let inputString = String(data: data!, encoding: NSUTF8StringEncoding)
         
+        let inputString:String! = String(data: data!, encoding: NSUTF8StringEncoding)
         
-        let csv = CSV(string: inputString!)
+        let csv = CSV(string: inputString)
         
-        ContractListVC.convenios = csv.rows
+        //print(csv.header)
+        print(csv.rows)
         
-        print(ContractListVC.convenios.last)
+//        inputString = inputString.stringByReplacingOccurrencesOfString("\"", withString: "")
+//        let arrayHeader = inputString.componentsSeparatedByString(";")
+//        
+//        var headers = [String]()
+//        
+//        for row in arrayHeader{
+//            
+//            let columns = row.componentsSeparatedByString("\n")
+//            
+//            headers.append(columns.first!)
+//            
+//            if(row == "ID_PROP_PROGRAMA"){
+//                break
+//            }
+//            
+//            
+//        }
+//
+//        
+//        print(headers)
+//        
+//        for row in arrayHeader{
+//            row.componentsSeparatedByString("\r")
+//            print(row)
+//        }
+    
+    
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
