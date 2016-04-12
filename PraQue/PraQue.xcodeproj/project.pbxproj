@@ -21,6 +21,7 @@
 		9337CAB81CBA91180073C82C /* ContractListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9337CAB71CBA91180073C82C /* ContractListVC.swift */; };
 		9337CABA1CBA915E0073C82C /* ContractDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9337CAB91CBA915E0073C82C /* ContractDetailVC.swift */; };
 		9337CABC1CBA91A20073C82C /* ContractTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9337CABB1CBA91A20073C82C /* ContractTableViewCell.swift */; };
+		9366C1CA1CBC84760071508A /* praqueentrada.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9366C1C91CBC84760071508A /* praqueentrada.mp4 */; };
 		9382CB231CBBDB4F0011569D /* ReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9382CB221CBBDB4F0011569D /* ReportTableViewCell.swift */; };
 		9382CB251CBBF4A40011569D /* FavoriteContractsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9382CB241CBBF4A40011569D /* FavoriteContractsVC.swift */; };
 		9382CB271CBBF5150011569D /* FavoriteContractsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9382CB261CBBF5150011569D /* FavoriteContractsTableViewCell.swift */; };
@@ -45,6 +46,7 @@
 		9337CAB71CBA91180073C82C /* ContractListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractListVC.swift; sourceTree = "<group>"; };
 		9337CAB91CBA915E0073C82C /* ContractDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractDetailVC.swift; sourceTree = "<group>"; };
 		9337CABB1CBA91A20073C82C /* ContractTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractTableViewCell.swift; sourceTree = "<group>"; };
+		9366C1C91CBC84760071508A /* praqueentrada.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = praqueentrada.mp4; sourceTree = "<group>"; };
 		9382CB221CBBDB4F0011569D /* ReportTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportTableViewCell.swift; sourceTree = "<group>"; };
 		9382CB241CBBF4A40011569D /* FavoriteContractsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteContractsVC.swift; sourceTree = "<group>"; };
 		9382CB261CBBF5150011569D /* FavoriteContractsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteContractsTableViewCell.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 		9337CAB11CBA8DF40073C82C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9366C1C91CBC84760071508A /* praqueentrada.mp4 */,
 				9382CB281CBBF51C0011569D /* Storyboards */,
 				9337CABB1CBA91A20073C82C /* ContractTableViewCell.swift */,
 				9382CB221CBBDB4F0011569D /* ReportTableViewCell.swift */,
@@ -194,6 +197,7 @@
 				93054AF11CBA7B6D0050D185 /* LaunchScreen.storyboard in Resources */,
 				9337CAB31CBA8EFC0073C82C /* InitialScreen.storyboard in Resources */,
 				9382CB2A1CBBF6800011569D /* FavoriteContracts.storyboard in Resources */,
+				9366C1CA1CBC84760071508A /* praqueentrada.mp4 in Resources */,
 				9337CAAE1CBA8D420073C82C /* Screenshotprototypes.png in Resources */,
 				93054AEE1CBA7B6D0050D185 /* Assets.xcassets in Resources */,
 			);

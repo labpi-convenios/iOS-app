@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zP8-qb-shg">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9532"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -10,45 +10,61 @@
         <scene sceneID="22q-hP-efp">
             <objects>
                 <viewController id="zP8-qb-shg" userLabel="Convenios favoritos" customClass="FavoriteContractsVC" customModule="PraQue" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="b5o-B8-bbR">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7b4-kM-UkV"/>
+                        <viewControllerLayoutGuide type="bottom" id="j4s-1i-uzQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="v44-Ss-1rZ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavoriteCell" id="wfn-qC-JxE" customClass="FavoriteContractsTableViewCell" customModule="PraQue" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wfn-qC-JxE" id="YIZ-de-aqK">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzn-OB-JnN">
-                                            <rect key="frame" x="29" y="14" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="jzn-OB-JnN" firstAttribute="leading" secondItem="YIZ-de-aqK" secondAttribute="leadingMargin" constant="21" id="UfO-l3-fBg"/>
-                                        <constraint firstItem="jzn-OB-JnN" firstAttribute="top" secondItem="YIZ-de-aqK" secondAttribute="topMargin" constant="6" id="qzp-gS-fkZ"/>
-                                    </constraints>
-                                </tableViewCellContentView>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kEP-Bc-Dix">
+                                <rect key="frame" x="-32" y="0.0" width="632" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavoriteCell" id="oqv-4t-bLB" customClass="FavoriteContractsTableViewCell" customModule="PraQue" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="632" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oqv-4t-bLB" id="LRc-28-eNI">
+                                            <rect key="frame" x="0.0" y="0.0" width="632" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1MD-7x-X0u">
+                                                    <rect key="frame" x="40" y="11" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1MD-7x-X0u" firstAttribute="top" secondItem="LRc-28-eNI" secondAttribute="topMargin" constant="3" id="L80-az-ffB"/>
+                                                <constraint firstItem="1MD-7x-X0u" firstAttribute="leading" secondItem="LRc-28-eNI" secondAttribute="leadingMargin" constant="32" id="wRp-vP-6zW"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="favoriteContractName" destination="1MD-7x-X0u" id="Chs-pL-yVS"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
-                                    <outlet property="favoriteContractName" destination="jzn-OB-JnN" id="18k-4h-mhc"/>
+                                    <outlet property="dataSource" destination="zP8-qb-shg" id="Nk5-KJ-Yuz"/>
+                                    <outlet property="delegate" destination="zP8-qb-shg" id="RGc-Qf-jGx"/>
                                 </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="zP8-qb-shg" id="qxX-pN-9Je"/>
-                            <outlet property="delegate" destination="zP8-qb-shg" id="mhj-Jy-3EL"/>
-                        </connections>
-                    </tableView>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kEP-Bc-Dix" firstAttribute="width" secondItem="v44-Ss-1rZ" secondAttribute="width" constant="32" id="4b4-bl-scP"/>
+                            <constraint firstItem="kEP-Bc-Dix" firstAttribute="height" secondItem="v44-Ss-1rZ" secondAttribute="height" id="EhD-cJ-Qgc"/>
+                            <constraint firstItem="kEP-Bc-Dix" firstAttribute="centerY" secondItem="v44-Ss-1rZ" secondAttribute="centerY" id="T17-8Z-oHb"/>
+                            <constraint firstItem="kEP-Bc-Dix" firstAttribute="centerX" secondItem="v44-Ss-1rZ" secondAttribute="centerX" constant="-16" id="xmB-Ex-3S9"/>
+                        </constraints>
+                    </view>
                     <navigationItem key="navigationItem" id="VSa-X1-Ftc"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="tableView" destination="b5o-B8-bbR" id="7cd-Ge-Q7o"/>
+                        <outlet property="tableView" destination="kEP-Bc-Dix" id="i9w-hT-fJ4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KTr-ui-4i8" userLabel="First Responder" sceneMemberID="firstResponder"/>

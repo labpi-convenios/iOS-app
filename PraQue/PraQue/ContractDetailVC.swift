@@ -54,7 +54,7 @@ class ContractDetailVC: UIViewController, UINavigationControllerDelegate, UITabl
         
         //chama a funcao fallow
         let fallowAction: UIAlertAction = UIAlertAction(title: "Seguir", style: .Default) { action -> Void in
-//            self.fallow()
+            self.followContratact()
         }
         actionSheetController.addAction(fallowAction)
         
@@ -69,6 +69,23 @@ class ContractDetailVC: UIViewController, UINavigationControllerDelegate, UITabl
         self.presentViewController(actionSheetController, animated: true, completion: nil)
     }
     
+    
+    
+    
+    
+    func followContratact(){
+    
+        let favoriteContract: UIAlertController = UIAlertController(title: "Seguir Convênio", message: "Esse convênio foi adicionado aos seus favoritos,você receberá notificações quando ocorrerem mudanças no mesmo.", preferredStyle: UIAlertControllerStyle.Alert)
+        let action: UIAlertAction = UIAlertAction(title: "ok", style: .Default) { action -> Void in
+        }
+        favoriteContract.addAction(action)
+        //Present the AlertController
+        self.presentViewController(favoriteContract, animated: true, completion: nil)
+
+    }
+    
+    
+    //funcoes de apresentaão de view
     func presentView(name: String) {
         let storyBoard : UIStoryboard = UIStoryboard(name: "ContractList", bundle: nil)
         var viewController = storyBoard.instantiateViewControllerWithIdentifier(name)
@@ -107,6 +124,14 @@ class ContractDetailVC: UIViewController, UINavigationControllerDelegate, UITabl
         self.presentViewController(activityViewController, animated: true, completion: nil)
 
     }
+    
+    
+    
+    
+    
+    
+    
+    //funcoes tableview
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1

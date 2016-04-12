@@ -7,13 +7,23 @@
 //
 
 import UIKit
+import MediaPlayer
+
 
 class InitialScreenVC: UIViewController {
 
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var currentMessage: UILabel!
     @IBOutlet var viewParallax: UIView!
-    @IBOutlet weak var imageBG: UIImageView!
+    @IBOutlet weak var initButton: UIButton!
+    @IBOutlet weak var inspectLabel: UILabel!
+    
+    
+    // AVPlayer
+    var item : AVPlayerItem!
+    var player : AVPlayer!
+    var avLayer : AVPlayerLayer!
+    
     
     // create swipe
     let swipeLeft = UISwipeGestureRecognizer()
@@ -27,11 +37,24 @@ class InitialScreenVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.addParallax()
+        do{
+            try playVideo()
+        } catch AppError.InvalidResource(let name, let type){
+            debugPrint("Could not find resource \(name).\(type)")
+        } catch {
+            debugPrint("Erro generico")
+        }
+
+        
+     //   self.addParallax()
         self.setupGesture()
         self.setMessage(self.currentIndex)
+        self.config()
         
     }
+    
+    
+    
     
     
     //configure gesture
@@ -73,9 +96,8 @@ class InitialScreenVC: UIViewController {
     //current message in label
     
     func setMessage(index: Int){
-        print(index)
         
-        let messages = ["Teste 01","Teste 02", "Teste 03"]
+        let messages = ["Veja as propostas dos governantes \n para qualquer cidade.","Veja quais propostas  foram aceitas\n e quanto foi repassado.", "Fiscalize se as propostas estão \nsendo colocadas em prática."]
         
         //self.imageBG.image = UIImage(named: self.imageArray[index])
         
@@ -124,5 +146,61 @@ class InitialScreenVC: UIViewController {
         
     }
 
+    
+    
+    
+    
+    //video
+    
+    private func playVideo() throws {
+        
+        guard let path = NSBundle.mainBundle().pathForResource("praqueentrada", ofType: "mp4") else {
+            throw AppError.InvalidResource("praqueentrada","mp4")
+        }
+        
+        let pathURL = NSURL.fileURLWithPath(path)
+        
+        // AVPlayerItem
+        self.item = AVPlayerItem(URL: pathURL)
+        // AVPlayer
+        self.player = AVPlayer(playerItem: self.item)
+        // AVPlayerLayer
+        self.avLayer = AVPlayerLayer(player: self.player)
+        
+        // Configurações da Layer
+        self.avLayer.frame = self.view.bounds
+        self.avLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+        self.player.play()
+        self.avLayer.opacity = 0.7
+        self.player.volume = 0.0
+        self.view.layer.addSublayer(self.avLayer)
+        
+        self.player.actionAtItemEnd = .None
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "playerItemDidReachEnd:", name: AVPlayerItemDidPlayToEndTimeNotification, object: player.currentItem)
+        
+    }
+    
+    func playerItemDidReachEnd(notification: NSNotification) {
+        player.seekToTime(kCMTimeZero)
+        player.play()
+        
+    }
+    
+    enum AppError : ErrorType {
+        case InvalidResource(String,String)
+    }
+    
+    func config() {
+        
+        self.view.layer.zPosition = 1
+        self.viewParallax.layer.zPosition = 1
+        self.initButton.layer.zPosition = 10
+        self.inspectLabel.layer.zPosition = 10
+        self.currentMessage.layer.zPosition = 10
+        
+    }
+
+    
+    
 
 }
