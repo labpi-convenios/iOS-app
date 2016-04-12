@@ -77,7 +77,7 @@ class InitialScreenVC: UIViewController {
         
         let messages = ["Teste 01","Teste 02", "Teste 03"]
         
-        self.imageBG.image = UIImage(named: self.imageArray[index])
+        //self.imageBG.image = UIImage(named: self.imageArray[index])
         
         self.currentMessage.text = messages[index]
         
