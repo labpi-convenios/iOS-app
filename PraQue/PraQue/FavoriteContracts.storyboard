@@ -60,7 +60,7 @@
                             <constraint firstItem="kEP-Bc-Dix" firstAttribute="centerX" secondItem="v44-Ss-1rZ" secondAttribute="centerX" constant="-16" id="xmB-Ex-3S9"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="VSa-X1-Ftc"/>
+                    <navigationItem key="navigationItem" title="Convênios Favoritos" id="2jX-fk-5As"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>

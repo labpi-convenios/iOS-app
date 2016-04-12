@@ -6,18 +6,25 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--ListContracts-->
+        <!--Convênios-->
         <scene sceneID="scw-JQ-hpD">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="shh-bz-qap" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="ListContracts" image="MapaTabBar" selectedImage="MapaTabBar" id="t4R-jA-ecr"/>
+                    <tabBarItem key="tabBarItem" title="Convênios" image="Hands" selectedImage="Hands" id="t4R-jA-ecr">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DxG-v2-bLK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" red="0.062745098040000002" green="0.4823529412" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="0.062745098040000002" green="0.4823529412" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -29,11 +36,17 @@
             </objects>
             <point key="canvasLocation" x="-125" y="973"/>
         </scene>
-        <!--Item-->
+        <!--Favoritos-->
         <scene sceneID="LRB-3d-Xu1">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0FU-3r-N0M" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="VIF-oh-Vms"/>
+                    <tabBarItem key="tabBarItem" title="Favoritos" image="Favorite" selectedImage="Favorite" id="VIF-oh-Vms">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fgt-Hr-rY8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -61,23 +74,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Praque?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMQ-QZ-Bxu">
-                                <rect key="frame" x="269" y="120" width="63" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pra Que?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMQ-QZ-Bxu">
+                                <rect key="frame" x="265" y="72" width="70" height="21"/>
                                 <color key="tintColor" red="0.098039215690000001" green="0.21960784310000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="chQ-sy-Do7">
-                                <rect key="frame" x="189" y="184" width="223" height="29"/>
+                                <rect key="frame" x="189" y="245" width="223" height="29"/>
                                 <segments>
                                     <segment title="Convênios"/>
                                     <segment title="Porque Ficalizar"/>
                                 </segments>
                                 <color key="tintColor" red="0.062745098040000002" green="0.4823529412" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
                             </segmentedControl>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="wId-2u-Caj">
-                                <rect key="frame" x="6" y="220" width="588" height="313"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="wId-2u-Caj">
+                                <rect key="frame" x="6" y="281" width="588" height="254"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="YuF-en-LS2">
+                                <rect key="frame" x="6" y="101" width="588" height="126"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -86,14 +106,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="fMQ-QZ-Bxu" firstAttribute="top" secondItem="XdW-46-fQO" secondAttribute="bottom" constant="56" id="DuE-jU-35n"/>
-                            <constraint firstItem="chQ-sy-Do7" firstAttribute="top" secondItem="fMQ-QZ-Bxu" secondAttribute="bottom" constant="43" id="Lop-hO-aZi"/>
+                            <constraint firstItem="fMQ-QZ-Bxu" firstAttribute="top" secondItem="XdW-46-fQO" secondAttribute="bottom" constant="8" id="DuE-jU-35n"/>
+                            <constraint firstItem="chQ-sy-Do7" firstAttribute="top" secondItem="fMQ-QZ-Bxu" secondAttribute="bottom" constant="152" id="Lop-hO-aZi"/>
                             <constraint firstItem="chQ-sy-Do7" firstAttribute="centerX" secondItem="Jds-OG-Z4k" secondAttribute="centerX" id="aiN-OD-bDh"/>
                             <constraint firstItem="wId-2u-Caj" firstAttribute="top" secondItem="chQ-sy-Do7" secondAttribute="bottom" constant="8" id="b7M-dK-cDR"/>
-                            <constraint firstItem="chQ-sy-Do7" firstAttribute="top" secondItem="Jds-OG-Z4k" secondAttribute="top" constant="184" id="bLc-3K-m8Q"/>
+                            <constraint firstItem="chQ-sy-Do7" firstAttribute="top" secondItem="Jds-OG-Z4k" secondAttribute="top" constant="245" id="bLc-3K-m8Q"/>
                             <constraint firstItem="chQ-sy-Do7" firstAttribute="centerX" secondItem="fMQ-QZ-Bxu" secondAttribute="centerX" id="ieB-Ml-FQL"/>
                             <constraint firstItem="wId-2u-Caj" firstAttribute="leading" secondItem="Jds-OG-Z4k" secondAttribute="leadingMargin" constant="-14" id="kKA-Pw-NLI"/>
-                            <constraint firstItem="Ve2-O7-xxh" firstAttribute="top" secondItem="wId-2u-Caj" secondAttribute="bottom" constant="18" id="sLw-hs-JKI"/>
+                            <constraint firstItem="Ve2-O7-xxh" firstAttribute="top" secondItem="wId-2u-Caj" secondAttribute="bottom" constant="16" id="sLw-hs-JKI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wId-2u-Caj" secondAttribute="trailing" constant="-14" id="wo0-ZF-NWh"/>
                         </constraints>
                     </view>
@@ -103,11 +123,17 @@
             </objects>
             <point key="canvasLocation" x="2779" y="1789"/>
         </scene>
-        <!--Item-->
+        <!--Sobre-->
         <scene sceneID="MvG-yw-ymP">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Lv7-Ic-a4U" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Dfa-KD-vYc"/>
+                    <tabBarItem key="tabBarItem" title="Sobre" image="About" selectedImage="About" id="Dfa-KD-vYc">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="iEo-va-MaO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -131,6 +157,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="0o8-lS-nwc">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" red="0.062745098040000002" green="0.4823529412" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
@@ -165,6 +192,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="MapaTabBar" width="29" height="29"/>
+        <image name="About" width="64" height="64"/>
+        <image name="Favorite" width="64" height="64"/>
+        <image name="Hands" width="64" height="64"/>
     </resources>
 </document>

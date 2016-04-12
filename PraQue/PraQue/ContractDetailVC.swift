@@ -15,7 +15,7 @@ class ContractDetailVC: UIViewController, UINavigationControllerDelegate, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        self.tableView.rowHeight = 240
+        self.tableView.rowHeight = 50
         self.optionButton()
 
         // Do any additional setup after loading the view.
@@ -72,7 +72,7 @@ class ContractDetailVC: UIViewController, UINavigationControllerDelegate, UITabl
     
     
     
-    
+    //alerta de seguir contrato
     func followContratact(){
     
         let favoriteContract: UIAlertController = UIAlertController(title: "Seguir Convênio", message: "Esse convênio foi adicionado aos seus favoritos,você receberá notificações quando ocorrerem mudanças no mesmo.", preferredStyle: UIAlertControllerStyle.Alert)
@@ -101,6 +101,8 @@ class ContractDetailVC: UIViewController, UINavigationControllerDelegate, UITabl
         
         self.presentViewController(viewController, animated: true, completion: nil)
     }
+    
+    
     
     //share options
     func shareSheet(){
@@ -138,7 +140,7 @@ class ContractDetailVC: UIViewController, UINavigationControllerDelegate, UITabl
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 6
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -147,10 +149,16 @@ class ContractDetailVC: UIViewController, UINavigationControllerDelegate, UITabl
         
         switch indexPath.row {
         case 0:
-            cell = tableView.dequeueReusableCellWithIdentifier("dataCell", forIndexPath: indexPath)
+            cell = tableView.dequeueReusableCellWithIdentifier("nameContract", forIndexPath: indexPath)
         case 1:
-            cell = tableView.dequeueReusableCellWithIdentifier("descriptionCell", forIndexPath: indexPath)
+            cell = tableView.dequeueReusableCellWithIdentifier("dateContract", forIndexPath: indexPath)
         case 2:
+            cell = tableView.dequeueReusableCellWithIdentifier("proponentCell", forIndexPath: indexPath)
+        case 3:
+            cell = tableView.dequeueReusableCellWithIdentifier("progressCell", forIndexPath: indexPath)
+        case 4:
+            cell = tableView.dequeueReusableCellWithIdentifier("descriptionCell", forIndexPath: indexPath)
+        case 5:
             cell = tableView.dequeueReusableCellWithIdentifier("goalCell", forIndexPath: indexPath)
         default:
             assert(false, "TableView da Detail com erro na hora de criar a célula")
@@ -159,11 +167,4 @@ class ContractDetailVC: UIViewController, UINavigationControllerDelegate, UITabl
         return cell
     }
 
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return UIView.init(frame: CGRectZero)
-    }
-    
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 0
-    }
 }
