@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		674326271CBAE05100312DDC /* ReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674326261CBAE05100312DDC /* ReportVC.swift */; };
 		674326291CBB400800312DDC /* ForWhatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674326281CBB400800312DDC /* ForWhatVC.swift */; };
+		77CE7AD43F1415CCD4FFDCBD /* Pods_PraQue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B83D229DEB263D18C6CE82 /* Pods_PraQue.framework */; };
 		93054AE71CBA7B6D0050D185 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93054AE61CBA7B6D0050D185 /* AppDelegate.swift */; };
 		93054AEE1CBA7B6D0050D185 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93054AED1CBA7B6D0050D185 /* Assets.xcassets */; };
 		93054AF11CBA7B6D0050D185 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93054AEF1CBA7B6D0050D185 /* LaunchScreen.storyboard */; };
@@ -23,6 +24,8 @@
 		9337CABC1CBA91A20073C82C /* ContractTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9337CABB1CBA91A20073C82C /* ContractTableViewCell.swift */; };
 		9366C1CA1CBC84760071508A /* praqueentrada.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9366C1C91CBC84760071508A /* praqueentrada.mp4 */; };
 		9366C1CC1CBD3C480071508A /* DetailContractTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9366C1CB1CBD3C480071508A /* DetailContractTableViewCell.swift */; };
+		9372E9011CBD66C000FCDBF0 /* mock_data.csv in Resources */ = {isa = PBXBuildFile; fileRef = 9372E8FF1CBD66C000FCDBF0 /* mock_data.csv */; };
+		9372E9021CBD66C000FCDBF0 /* mock_favorites.csv in Resources */ = {isa = PBXBuildFile; fileRef = 9372E9001CBD66C000FCDBF0 /* mock_favorites.csv */; };
 		9382CB231CBBDB4F0011569D /* ReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9382CB221CBBDB4F0011569D /* ReportTableViewCell.swift */; };
 		9382CB251CBBF4A40011569D /* FavoriteContractsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9382CB241CBBF4A40011569D /* FavoriteContractsVC.swift */; };
 		9382CB271CBBF5150011569D /* FavoriteContractsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9382CB261CBBF5150011569D /* FavoriteContractsTableViewCell.swift */; };
@@ -31,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		20B83D229DEB263D18C6CE82 /* Pods_PraQue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PraQue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		674326261CBAE05100312DDC /* ReportVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportVC.swift; sourceTree = "<group>"; };
 		674326281CBB400800312DDC /* ForWhatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForWhatVC.swift; sourceTree = "<group>"; };
 		93054AE31CBA7B6D0050D185 /* PraQue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PraQue.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,11 +53,15 @@
 		9337CABB1CBA91A20073C82C /* ContractTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractTableViewCell.swift; sourceTree = "<group>"; };
 		9366C1C91CBC84760071508A /* praqueentrada.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = praqueentrada.mp4; sourceTree = "<group>"; };
 		9366C1CB1CBD3C480071508A /* DetailContractTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailContractTableViewCell.swift; sourceTree = "<group>"; };
+		9372E8FF1CBD66C000FCDBF0 /* mock_data.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mock_data.csv; sourceTree = "<group>"; };
+		9372E9001CBD66C000FCDBF0 /* mock_favorites.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mock_favorites.csv; sourceTree = "<group>"; };
 		9382CB221CBBDB4F0011569D /* ReportTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportTableViewCell.swift; sourceTree = "<group>"; };
 		9382CB241CBBF4A40011569D /* FavoriteContractsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteContractsVC.swift; sourceTree = "<group>"; };
 		9382CB261CBBF5150011569D /* FavoriteContractsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteContractsTableViewCell.swift; sourceTree = "<group>"; };
 		9382CB291CBBF6800011569D /* FavoriteContracts.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FavoriteContracts.storyboard; sourceTree = "<group>"; };
 		93DC6B071CBBF8AE00482933 /* AboutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
+		9793666446AF0294781281B4 /* Pods-PraQue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PraQue.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PraQue/Pods-PraQue.debug.xcconfig"; sourceTree = "<group>"; };
+		9BCB8BB0F510365B8E1376E3 /* Pods-PraQue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PraQue.release.xcconfig"; path = "Pods/Target Support Files/Pods-PraQue/Pods-PraQue.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77CE7AD43F1415CCD4FFDCBD /* Pods_PraQue.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +81,8 @@
 			children = (
 				93054AE51CBA7B6D0050D185 /* PraQue */,
 				93054AE41CBA7B6D0050D185 /* Products */,
+				DFDA1401305C8330144BB634 /* Pods */,
+				FEDCF611B47120C6C070FFFE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +97,7 @@
 		93054AE51CBA7B6D0050D185 /* PraQue */ = {
 			isa = PBXGroup;
 			children = (
+				9372E8FE1CBD66A500FCDBF0 /* Data */,
 				9337CAB41CBA90A00073C82C /* Controllers */,
 				9337CAB11CBA8DF40073C82C /* View */,
 				9337CAAD1CBA8D420073C82C /* Screenshotprototypes.png */,
@@ -100,7 +112,6 @@
 		9337CAB11CBA8DF40073C82C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9366C1C91CBC84760071508A /* praqueentrada.mp4 */,
 				9382CB281CBBF51C0011569D /* Storyboards */,
 				9337CABB1CBA91A20073C82C /* ContractTableViewCell.swift */,
 				9382CB221CBBDB4F0011569D /* ReportTableViewCell.swift */,
@@ -125,6 +136,16 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		9372E8FE1CBD66A500FCDBF0 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				9366C1C91CBC84760071508A /* praqueentrada.mp4 */,
+				9372E8FF1CBD66C000FCDBF0 /* mock_data.csv */,
+				9372E9001CBD66C000FCDBF0 /* mock_favorites.csv */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
 		9382CB281CBBF51C0011569D /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +157,23 @@
 			name = Storyboards;
 			sourceTree = "<group>";
 		};
+		DFDA1401305C8330144BB634 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9793666446AF0294781281B4 /* Pods-PraQue.debug.xcconfig */,
+				9BCB8BB0F510365B8E1376E3 /* Pods-PraQue.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FEDCF611B47120C6C070FFFE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20B83D229DEB263D18C6CE82 /* Pods_PraQue.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,9 +181,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93054AF51CBA7B6D0050D185 /* Build configuration list for PBXNativeTarget "PraQue" */;
 			buildPhases = (
+				C01FDD12B738DA788735ACB2 /* Check Pods Manifest.lock */,
 				93054ADF1CBA7B6D0050D185 /* Sources */,
 				93054AE01CBA7B6D0050D185 /* Frameworks */,
 				93054AE11CBA7B6D0050D185 /* Resources */,
+				F8BA8950A617BF1F4F053797 /* Embed Pods Frameworks */,
+				93998A6F54CB9E58800DB4F5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -195,6 +236,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9372E9021CBD66C000FCDBF0 /* mock_favorites.csv in Resources */,
 				93054B591CBA847C0050D185 /* Main.storyboard in Resources */,
 				9337CAB01CBA8DB70073C82C /* ContractList.storyboard in Resources */,
 				93054AF11CBA7B6D0050D185 /* LaunchScreen.storyboard in Resources */,
@@ -202,11 +244,60 @@
 				9382CB2A1CBBF6800011569D /* FavoriteContracts.storyboard in Resources */,
 				9366C1CA1CBC84760071508A /* praqueentrada.mp4 in Resources */,
 				9337CAAE1CBA8D420073C82C /* Screenshotprototypes.png in Resources */,
+				9372E9011CBD66C000FCDBF0 /* mock_data.csv in Resources */,
 				93054AEE1CBA7B6D0050D185 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		93998A6F54CB9E58800DB4F5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PraQue/Pods-PraQue-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C01FDD12B738DA788735ACB2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F8BA8950A617BF1F4F053797 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PraQue/Pods-PraQue-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		93054ADF1CBA7B6D0050D185 /* Sources */ = {
@@ -328,6 +419,7 @@
 		};
 		93054AF61CBA7B6D0050D185 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9793666446AF0294781281B4 /* Pods-PraQue.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -342,6 +434,7 @@
 		};
 		93054AF71CBA7B6D0050D185 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BCB8BB0F510365B8E1376E3 /* Pods-PraQue.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

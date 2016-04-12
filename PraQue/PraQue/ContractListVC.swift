@@ -8,10 +8,13 @@
 
 import UIKit
 import MapKit
+import SwiftCSV
 
 class ContractListVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var map: MKMapView!
+    
+    
     
     // Array de testes
    static var convenios = [
@@ -29,16 +32,27 @@ class ContractListVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, 
         ]
     ]
     
-
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.map.delegate = self
         self.map.showsUserLocation = true;
+     
+        let sourcePath = NSBundle.mainBundle().pathForResource("mock_data", ofType: "csv")
         
-        // Do any additional setup after loading the view.
+        let data = NSData(contentsOfFile: sourcePath!)
+        
+        let inputString = String(data: data!, encoding: NSUTF8StringEncoding)
+        
+        
+        let csv = CSV(string: inputString!)
+        
+        ContractListVC.convenios = csv.rows
+        
+        print(ContractListVC.convenios.last)
     }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
