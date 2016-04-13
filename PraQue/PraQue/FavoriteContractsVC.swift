@@ -30,14 +30,14 @@ class FavoriteContractsVC: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return ContractListVC.convenios.count
+        return ContractListVC.fakeDB.rows.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("FavoriteCell", forIndexPath: indexPath) as! FavoriteContractsTableViewCell
         
-        cell.favoriteContractName.text = ContractListVC.convenios[indexPath.row]["NM_PROGRAMA"]
+        cell.favoriteContractName.text = ContractListVC.fakeDB.rows[indexPath.row]["NM_PROGRAMA"]
         
         return cell
     }
