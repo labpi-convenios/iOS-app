@@ -41,45 +41,7 @@ class ContractListVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, 
         super.viewDidLoad()
         self.map.delegate = self
         self.map.showsUserLocation = true;
-     
-        let sourcePath = NSBundle.mainBundle().pathForResource("mock_data", ofType: "csv")
-        
-        let data = NSData(contentsOfFile: sourcePath!)
-        
-        
-        let inputString:String! = String(data: data!, encoding: NSUTF8StringEncoding)
-        
-        let csv = CSV(string: inputString)
-        
-        //print(csv.header)
-        print(csv.rows)
-        
-//        inputString = inputString.stringByReplacingOccurrencesOfString("\"", withString: "")
-//        let arrayHeader = inputString.componentsSeparatedByString(";")
-//        
-//        var headers = [String]()
-//        
-//        for row in arrayHeader{
-//            
-//            let columns = row.componentsSeparatedByString("\n")
-//            
-//            headers.append(columns.first!)
-//            
-//            if(row == "ID_PROP_PROGRAMA"){
-//                break
-//            }
-//            
-//            
-//        }
-//
-//        
-//        print(headers)
-//        
-//        for row in arrayHeader{
-//            row.componentsSeparatedByString("\r")
-//            print(row)
-//        }
-    
+        self.manageCSV()
     
     }
     override func didReceiveMemoryWarning() {
@@ -104,5 +66,54 @@ class ContractListVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, 
         return cell
     }
     
+    
+    func manageCSV(){
+    
+        
+        let sourcePath = NSBundle.mainBundle().pathForResource("mock_favorites", ofType: "csv")
+        
+        let data = NSData(contentsOfFile: sourcePath!)
+        
+        
+        let inputString:String! = String(data: data!, encoding: NSUTF8StringEncoding)
+        
+        let csv = CSV(string: inputString)
+
+        let x:[[String:String]] = csv.rows // igual a do marcelo
+        let teste:[String:String] = x.first!
+        let teste2 = teste.first
+      //  print(teste2)
+      //  print(csv.columns)
+      //  print(csv.header)
+        
+        
+        //        inputString = inputString.stringByReplacingOccurrencesOfString("\"", withString: "")
+        //        let arrayHeader = inputString.componentsSeparatedByString(";")
+        //
+        //        var headers = [String]()
+        //
+        //        for row in arrayHeader{
+        //
+        //            let columns = row.componentsSeparatedByString("\n")
+        //
+        //            headers.append(columns.first!)
+        //
+        //            if(row == "ID_PROP_PROGRAMA"){
+        //                break
+        //            }
+        //
+        //
+        //        }
+        //
+        //
+        //        print(headers)
+        //        
+        //        for row in arrayHeader{
+        //            row.componentsSeparatedByString("\r")
+        //            print(row)
+        //        }
+
+    
+    }
 
 }
