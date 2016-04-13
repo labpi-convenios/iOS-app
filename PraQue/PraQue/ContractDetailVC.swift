@@ -9,13 +9,11 @@
 import UIKit
 
 class ContractDetailVC: UIViewController, UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource {
-
-    @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var tableView: UITableViewCell!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.tableView.rowHeight = 50
         self.optionButton()
 
         // Do any additional setup after loading the view.
@@ -127,12 +125,6 @@ class ContractDetailVC: UIViewController, UINavigationControllerDelegate, UITabl
 
     }
     
-    
-    
-    
-    
-    
-    
     //funcoes tableview
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -140,31 +132,70 @@ class ContractDetailVC: UIViewController, UINavigationControllerDelegate, UITabl
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return 7
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        var cell = UITableViewCell()
+        let selectedRow = ContractListVC.selectedRow
+        var cell = DetailContractTableViewCell()
+
         
         switch indexPath.row {
         case 0:
-            cell = tableView.dequeueReusableCellWithIdentifier("nameContract", forIndexPath: indexPath)
+            cell = tableView.dequeueReusableCellWithIdentifier("nameContract", forIndexPath: indexPath) as! DetailContractTableViewCell
+            cell.titleLabel.text = ContractListVC.fakeDB.rows[selectedRow]["NM_PROGRAMA"]
         case 1:
-            cell = tableView.dequeueReusableCellWithIdentifier("dateContract", forIndexPath: indexPath)
+            cell = tableView.dequeueReusableCellWithIdentifier("dateContract", forIndexPath: indexPath)  as! DetailContractTableViewCell
+            cell.dateLabel.text = ContractListVC.fakeDB.rows[selectedRow]["ANO_CONVENIO"]
         case 2:
-            cell = tableView.dequeueReusableCellWithIdentifier("proponentCell", forIndexPath: indexPath)
+            cell = tableView.dequeueReusableCellWithIdentifier("proponentCell", forIndexPath: indexPath)  as! DetailContractTableViewCell
+            cell.proponentLabel.text = ContractListVC.fakeDB.rows[selectedRow]["NM_PROPONENTE"]
+
         case 3:
-            cell = tableView.dequeueReusableCellWithIdentifier("progressCell", forIndexPath: indexPath)
+            cell = tableView.dequeueReusableCellWithIdentifier("repasseCell", forIndexPath: indexPath) as! DetailContractTableViewCell
+            cell.transferValue.text = ContractListVC.fakeDB.rows[selectedRow]["VL_REPASSE"]
+
         case 4:
-            cell = tableView.dequeueReusableCellWithIdentifier("descriptionCell", forIndexPath: indexPath)
+            cell = tableView.dequeueReusableCellWithIdentifier("progressCell", forIndexPath: indexPath) as! DetailContractTableViewCell
+
         case 5:
-            cell = tableView.dequeueReusableCellWithIdentifier("goalCell", forIndexPath: indexPath)
+            cell = tableView.dequeueReusableCellWithIdentifier("descriptionCell", forIndexPath: indexPath) as! DetailContractTableViewCell
+            cell.descriptionText.text = ContractListVC.fakeDB.rows[selectedRow]["TX_OBJETO_CONVENIO"]
+        case 6:
+            cell = tableView.dequeueReusableCellWithIdentifier("goalCell", forIndexPath: indexPath) as! DetailContractTableViewCell
+            cell.goalText.text = ContractListVC.fakeDB.rows[selectedRow]["TX_JUSTIFICATIVA"]
+
         default:
             assert(false, "TableView da Detail com erro na hora de criar a célula")
         }
         
+
         return cell
     }
 
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        var height: CGFloat = 0
+        
+        switch indexPath.row {
+        case 0:
+            height = 50
+        case 1:
+            height = 50
+        case 2:
+            height = 50
+        case 3:
+            height = 50
+        case 4:
+            height = 50
+        case 5:
+            height = 260
+        case 6:
+            height = 260
+        default:
+            assert(false, "TableView da Detail com erro na hora de criar a célula")
+        }
+        
+        return height
+    }
 }

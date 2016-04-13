@@ -15,6 +15,7 @@ class ContractListVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, 
     @IBOutlet weak var map: MKMapView!
 
     static var fakeDB = CSV(string: "abc\nabc")
+    static var selectedRow = 0
 
     
     override func viewDidLoad() {
@@ -46,11 +47,14 @@ class ContractListVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, 
         return cell
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        ContractListVC.selectedRow = indexPath.row
+    }
     
     func manageCSV(){
     
         
-        let sourcePath = NSBundle.mainBundle().pathForResource("mock_favorites", ofType: "csv")
+        let sourcePath = NSBundle.mainBundle().pathForResource("mock_data", ofType: "csv")
         
         let data = NSData(contentsOfFile: sourcePath!)
         
