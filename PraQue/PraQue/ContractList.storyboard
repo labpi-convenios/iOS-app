@@ -398,15 +398,19 @@
                                     <constraint firstAttribute="height" constant="65" id="vPd-Ci-JWZ"/>
                                 </constraints>
                                 <color key="barTintColor" red="0.062745098040000002" green="0.4823529412" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="0.99607843137254903" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Relato" id="r5h-ZD-XsO">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="NeR-Ju-AYL">
-                                            <color key="tintColor" red="0.15686274510000001" green="0.2274509804" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="tintColor" red="1" green="0.99607843137254903" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="cancelButton:" destination="a8I-Yk-AKC" id="YfX-2x-7sr"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="NOn-KD-9QD">
+                                            <color key="tintColor" red="1" green="0.99607843137254903" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
                                                 <action selector="doneButton:" destination="a8I-Yk-AKC" id="EAz-z7-ckw"/>
                                             </connections>
@@ -426,7 +430,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cgn-h1-kzk">
-                                                    <rect key="frame" x="123" y="18" width="458" height="29"/>
+                                                    <rect key="frame" x="103" y="18" width="477" height="29"/>
                                                     <segments>
                                                         <segment title="Concluída"/>
                                                         <segment title="Não Concluído"/>
@@ -434,7 +438,10 @@
                                                     <color key="tintColor" red="0.062745098040000002" green="0.4823529412" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 </segmentedControl>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Situação" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WWx-vc-qE4">
-                                                    <rect key="frame" x="16" y="18" width="67" height="21"/>
+                                                    <rect key="frame" x="16" y="18" width="67" height="20.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="67" id="iNw-Hk-8y1"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.098039215690000001" green="0.21960784310000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -443,7 +450,7 @@
                                             <constraints>
                                                 <constraint firstItem="WWx-vc-qE4" firstAttribute="leading" secondItem="4Bo-kK-Cx6" secondAttribute="leadingMargin" constant="8" id="Pwe-SI-5a5"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="cgn-h1-kzk" secondAttribute="trailing" constant="12" id="WRU-DJ-6Mo"/>
-                                                <constraint firstItem="cgn-h1-kzk" firstAttribute="leading" secondItem="WWx-vc-qE4" secondAttribute="trailing" constant="40" id="aFC-fL-ZDB"/>
+                                                <constraint firstItem="cgn-h1-kzk" firstAttribute="leading" secondItem="WWx-vc-qE4" secondAttribute="trailing" constant="20" id="aFC-fL-ZDB"/>
                                                 <constraint firstItem="cgn-h1-kzk" firstAttribute="top" secondItem="4Bo-kK-Cx6" secondAttribute="topMargin" constant="10" id="fDh-MH-2CD"/>
                                                 <constraint firstItem="WWx-vc-qE4" firstAttribute="top" secondItem="4Bo-kK-Cx6" secondAttribute="topMargin" constant="10" id="yEf-Cd-ekd"/>
                                             </constraints>
@@ -569,9 +576,14 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="673-nT-SvV"/>
                                 </constraints>
+                                <color key="barTintColor" red="0.011764705882352941" green="0.54509803921568623" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="0.99607843137254903" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
                                 <items>
-                                    <navigationItem title="Pra Quê?" id="Icx-Va-ALD">
+                                    <navigationItem title="Pra quê" id="Icx-Va-ALD">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Ilc-vJ-geS">
+                                            <color key="tintColor" red="1" green="0.99607843137254903" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
                                                 <action selector="cancelButton:" destination="i5Z-OI-aaV" id="0Ic-Lo-i8f"/>
                                             </connections>

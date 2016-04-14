@@ -76,6 +76,7 @@ class ContractDetailVC: UIViewController, UINavigationControllerDelegate, UITabl
         let favoriteContract: UIAlertController = UIAlertController(title: "Seguir Convênio", message: "Esse convênio foi adicionado aos seus favoritos,você receberá notificações quando ocorrerem mudanças no mesmo.", preferredStyle: UIAlertControllerStyle.Alert)
         let action: UIAlertAction = UIAlertAction(title: "ok", style: .Default) { action -> Void in
         }
+        
         favoriteContract.addAction(action)
         //Present the AlertController
         self.presentViewController(favoriteContract, animated: true, completion: nil)

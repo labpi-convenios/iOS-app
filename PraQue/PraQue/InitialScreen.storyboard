@@ -26,12 +26,12 @@
                                 <color key="pageIndicatorTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="0.062745098040000002" green="0.4823529412" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGW-Xd-gRR">
-                                <rect key="frame" x="258" y="372" width="84" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGW-Xd-gRR">
+                                <rect key="frame" x="130" y="307" width="331" height="106"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" id="fRh-Ma-FRt"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.062745098040000002" green="0.4823529412" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -64,9 +64,9 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fiscalize" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXY-JE-38g">
-                                <rect key="frame" x="233" y="193" width="109" height="21"/>
+                                <rect key="frame" x="233" y="176" width="109" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="r3J-3R-M5L"/>
+                                    <constraint firstAttribute="height" constant="48" id="r3J-3R-M5L"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="30"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -77,8 +77,8 @@
                         <color key="backgroundColor" red="0.15686274510000001" green="0.2274509804" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.098039215690000001" green="0.21960784310000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="YXY-JE-38g" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="173" id="8Eu-gO-lDa"/>
-                            <constraint firstItem="YXY-JE-38g" firstAttribute="leading" secondItem="RGW-Xd-gRR" secondAttribute="leading" constant="-25" id="9qC-Du-dYV"/>
+                            <constraint firstItem="YXY-JE-38g" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="156" id="8Eu-gO-lDa"/>
+                            <constraint firstItem="YXY-JE-38g" firstAttribute="leading" secondItem="RGW-Xd-gRR" secondAttribute="leading" constant="103" id="9qC-Du-dYV"/>
                             <constraint firstItem="CuE-hW-sRB" firstAttribute="top" secondItem="4h4-HT-bVB" secondAttribute="bottom" constant="44" id="C0n-L0-R8l"/>
                             <constraint firstItem="4h4-HT-bVB" firstAttribute="top" secondItem="RGW-Xd-gRR" secondAttribute="bottom" constant="8" id="EhP-kI-38h"/>
                             <constraint firstItem="4h4-HT-bVB" firstAttribute="top" secondItem="RGW-Xd-gRR" secondAttribute="bottom" constant="83" id="RJr-dS-UKo"/>
@@ -88,15 +88,15 @@
                             <constraint firstItem="4h4-HT-bVB" firstAttribute="leading" secondItem="CuE-hW-sRB" secondAttribute="leading" constant="-99" id="bSJ-Xt-rDt"/>
                             <constraint firstItem="RGW-Xd-gRR" firstAttribute="top" secondItem="YXY-JE-38g" secondAttribute="bottom" constant="53" id="cJB-H7-Pja"/>
                             <constraint firstAttribute="bottom" secondItem="4h4-HT-bVB" secondAttribute="bottom" constant="147" id="hMR-pB-Qoa"/>
-                            <constraint firstItem="RGW-Xd-gRR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lhG-Vj-j7T"/>
-                            <constraint firstItem="YXY-JE-38g" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="173" id="vam-xS-em3"/>
-                            <constraint firstItem="RGW-Xd-gRR" firstAttribute="top" secondItem="YXY-JE-38g" secondAttribute="bottom" constant="158" id="ynl-q2-BEY"/>
+                            <constraint firstItem="RGW-Xd-gRR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-4.5" id="lhG-Vj-j7T"/>
+                            <constraint firstItem="YXY-JE-38g" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="156" id="vam-xS-em3"/>
+                            <constraint firstItem="RGW-Xd-gRR" firstAttribute="top" secondItem="YXY-JE-38g" secondAttribute="bottom" constant="83" id="ynl-q2-BEY"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="cJB-H7-Pja"/>
                                 <exclude reference="RJr-dS-UKo"/>
                                 <exclude reference="hMR-pB-Qoa"/>
-                                <exclude reference="cJB-H7-Pja"/>
                             </mask>
                         </variation>
                     </view>
