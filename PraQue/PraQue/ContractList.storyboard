@@ -37,18 +37,18 @@
                                 </connections>
                             </mapView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="107" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="m2x-j4-WyY">
-                                <rect key="frame" x="0.0" y="192" width="600" height="408"/>
+                                <rect key="frame" x="-22" y="192" width="622" height="408"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="107" id="hHh-d9-iVU" customClass="ContractTableViewCell" customModule="PraQue" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="107"/>
+                                        <rect key="frame" x="0.0" y="28" width="622" height="107"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hHh-d9-iVU" id="SXQ-oh-5mJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="567" height="106.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="589" height="106.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U4b-t6-RRj">
-                                                    <rect key="frame" x="25" y="-8" width="542" height="114.5"/>
+                                                    <rect key="frame" x="25" y="-8" width="564" height="114.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -82,7 +82,7 @@
                             <constraint firstItem="kob-uX-Uq5" firstAttribute="leading" secondItem="fPg-EM-FOl" secondAttribute="leading" id="Gdf-tU-UbY"/>
                             <constraint firstItem="DBd-qL-BMJ" firstAttribute="top" secondItem="m2x-j4-WyY" secondAttribute="bottom" id="Lcx-Mi-qWZ"/>
                             <constraint firstAttribute="trailing" secondItem="yuv-ZO-tkB" secondAttribute="trailing" id="bMu-6l-7uB"/>
-                            <constraint firstItem="m2x-j4-WyY" firstAttribute="leading" secondItem="fPg-EM-FOl" secondAttribute="leading" id="dQN-Yy-9Mf"/>
+                            <constraint firstItem="m2x-j4-WyY" firstAttribute="leading" secondItem="fPg-EM-FOl" secondAttribute="leading" constant="-22" id="dQN-Yy-9Mf"/>
                             <constraint firstAttribute="trailing" secondItem="kob-uX-Uq5" secondAttribute="trailing" id="neB-t6-Oju"/>
                             <constraint firstItem="kob-uX-Uq5" firstAttribute="top" secondItem="GuX-rp-SZv" secondAttribute="bottom" id="yAp-8L-RhC"/>
                         </constraints>
@@ -580,14 +580,14 @@
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="87" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="a9k-n6-Hvo">
-                                <rect key="frame" x="0.0" y="145" width="600" height="455"/>
+                                <rect key="frame" x="-41" y="145" width="641" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Question" rowHeight="76" id="JGs-dZ-S1a" customClass="ForWhatTableViewCell" customModule="PraQue" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="76"/>
+                                        <rect key="frame" x="0.0" y="28" width="641" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JGs-dZ-S1a" id="QAv-Ca-Bp3">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="75.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="641" height="75.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7O-8e-QBn">
@@ -598,7 +598,7 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="u7O-8e-QBn" secondAttribute="trailing" constant="20" id="2fk-mZ-uZH"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="u7O-8e-QBn" secondAttribute="trailing" constant="61" id="2fk-mZ-uZH"/>
                                                 <constraint firstItem="u7O-8e-QBn" firstAttribute="top" secondItem="QAv-Ca-Bp3" secondAttribute="topMargin" constant="11" id="4XC-2c-E6g"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="u7O-8e-QBn" secondAttribute="bottom" constant="9.5" id="PZF-cE-ac6"/>
                                                 <constraint firstItem="u7O-8e-QBn" firstAttribute="leading" secondItem="QAv-Ca-Bp3" secondAttribute="leadingMargin" constant="40" id="tq8-jp-1Ke"/>
@@ -629,7 +629,7 @@
                             <constraint firstItem="qbZ-5v-A4H" firstAttribute="centerX" secondItem="Ih1-tr-OrD" secondAttribute="centerX" id="fmY-Kp-nUz"/>
                             <constraint firstItem="7vg-8v-bVB" firstAttribute="leading" secondItem="Ih1-tr-OrD" secondAttribute="leading" id="gEq-g8-doH"/>
                             <constraint firstItem="a9k-n6-Hvo" firstAttribute="top" secondItem="7vg-8v-bVB" secondAttribute="bottom" constant="80" id="hJa-gE-zIR"/>
-                            <constraint firstItem="a9k-n6-Hvo" firstAttribute="leading" secondItem="Ih1-tr-OrD" secondAttribute="leading" id="hLS-Rk-Lsq"/>
+                            <constraint firstItem="a9k-n6-Hvo" firstAttribute="leading" secondItem="Ih1-tr-OrD" secondAttribute="leading" constant="-41" id="hLS-Rk-Lsq"/>
                             <constraint firstAttribute="trailing" secondItem="a9k-n6-Hvo" secondAttribute="trailing" id="myF-ab-NGN"/>
                             <constraint firstAttribute="trailing" secondItem="7vg-8v-bVB" secondAttribute="trailing" id="xmt-re-6PK"/>
                         </constraints>
