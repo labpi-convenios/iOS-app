@@ -51,6 +51,7 @@ class ContractListVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, 
         ContractListVC.selectedRow = indexPath.row
     }
     
+    
     func manageCSV(){
     
         

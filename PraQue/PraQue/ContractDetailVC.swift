@@ -179,7 +179,7 @@ class ContractDetailVC: UIViewController, UINavigationControllerDelegate, UITabl
         
         switch indexPath.row {
         case 0:
-            height = 50
+            height = 80
         case 1:
             height = 50
         case 2:

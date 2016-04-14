@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zP8-qb-shg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zP8-qb-shg">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -18,27 +18,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kEP-Bc-Dix">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="103" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kEP-Bc-Dix">
                                 <rect key="frame" x="-32" y="0.0" width="632" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavoriteCell" id="oqv-4t-bLB" customClass="FavoriteContractsTableViewCell" customModule="PraQue" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="632" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavoriteCell" rowHeight="103" id="oqv-4t-bLB" customClass="FavoriteContractsTableViewCell" customModule="PraQue" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="632" height="103"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oqv-4t-bLB" id="LRc-28-eNI">
-                                            <rect key="frame" x="0.0" y="0.0" width="632" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="632" height="102.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1MD-7x-X0u">
-                                                    <rect key="frame" x="40" y="11" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1MD-7x-X0u">
+                                                    <rect key="frame" x="39" y="6" width="585" height="96.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="1MD-7x-X0u" firstAttribute="top" secondItem="LRc-28-eNI" secondAttribute="topMargin" constant="3" id="L80-az-ffB"/>
-                                                <constraint firstItem="1MD-7x-X0u" firstAttribute="leading" secondItem="LRc-28-eNI" secondAttribute="leadingMargin" constant="32" id="wRp-vP-6zW"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="1MD-7x-X0u" secondAttribute="trailing" id="1md-Gh-0Ju"/>
+                                                <constraint firstItem="1MD-7x-X0u" firstAttribute="leading" secondItem="LRc-28-eNI" secondAttribute="leadingMargin" constant="31" id="5Mw-LJ-k7A"/>
+                                                <constraint firstItem="1MD-7x-X0u" firstAttribute="top" secondItem="LRc-28-eNI" secondAttribute="topMargin" constant="-2" id="mi3-Bb-4jQ"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="1MD-7x-X0u" secondAttribute="bottom" constant="-8" id="vWl-Ij-aRT"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
