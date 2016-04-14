@@ -15,14 +15,15 @@ class ContractListVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, 
     @IBOutlet weak var map: MKMapView!
 
     static var fakeDB = CSV(string: "abc\nabc")
+    static var fakeFavorites = CSV(string: "abc\nabc")
     static var selectedRow = 0
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.map.delegate = self
         self.map.showsUserLocation = true;
-        self.manageCSV()
+        self.manageCSVDB()
+        self.manageCSVFavorites()
     
     }
     override func didReceiveMemoryWarning() {
@@ -51,10 +52,9 @@ class ContractListVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, 
         ContractListVC.selectedRow = indexPath.row
     }
     
+
+    func manageCSVDB(){
     
-    func manageCSV(){
-    
-        
         let sourcePath = NSBundle.mainBundle().pathForResource("mock_data", ofType: "csv")
         
         let data = NSData(contentsOfFile: sourcePath!)
@@ -66,7 +66,20 @@ class ContractListVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, 
         let tab = NSCharacterSet(charactersInString: ";")
         ContractListVC.fakeDB = CSV(string: inputString, delimiter: tab)
     
-    
     }
 
+    func manageCSVFavorites(){
+        
+        let sourcePath = NSBundle.mainBundle().pathForResource("mock_favorites", ofType: "csv")
+        
+        let data = NSData(contentsOfFile: sourcePath!)
+        
+        
+        var inputString:String! = String(data: data!, encoding: NSUTF8StringEncoding)
+        inputString = inputString.stringByReplacingOccurrencesOfString("\"", withString: "")
+        
+        let tab = NSCharacterSet(charactersInString: ";")
+        ContractListVC.fakeFavorites = CSV(string: inputString, delimiter: tab)
+        
+    }
 }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		674326271CBAE05100312DDC /* ReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674326261CBAE05100312DDC /* ReportVC.swift */; };
 		674326291CBB400800312DDC /* ForWhatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674326281CBB400800312DDC /* ForWhatVC.swift */; };
+		67AF22491CBE94F900E155DA /* ForWhatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67AF22481CBE94F900E155DA /* ForWhatTableViewCell.swift */; };
 		77CE7AD43F1415CCD4FFDCBD /* Pods_PraQue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B83D229DEB263D18C6CE82 /* Pods_PraQue.framework */; };
 		93054AE71CBA7B6D0050D185 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93054AE61CBA7B6D0050D185 /* AppDelegate.swift */; };
 		93054AEE1CBA7B6D0050D185 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93054AED1CBA7B6D0050D185 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 		20B83D229DEB263D18C6CE82 /* Pods_PraQue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PraQue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		674326261CBAE05100312DDC /* ReportVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportVC.swift; sourceTree = "<group>"; };
 		674326281CBB400800312DDC /* ForWhatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForWhatVC.swift; sourceTree = "<group>"; };
+		67AF22481CBE94F900E155DA /* ForWhatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForWhatTableViewCell.swift; sourceTree = "<group>"; };
 		93054AE31CBA7B6D0050D185 /* PraQue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PraQue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93054AE61CBA7B6D0050D185 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93054AED1CBA7B6D0050D185 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			children = (
 				9382CB281CBBF51C0011569D /* Storyboards */,
 				9337CABB1CBA91A20073C82C /* ContractTableViewCell.swift */,
+				67AF22481CBE94F900E155DA /* ForWhatTableViewCell.swift */,
 				9382CB221CBBDB4F0011569D /* ReportTableViewCell.swift */,
 				9382CB261CBBF5150011569D /* FavoriteContractsTableViewCell.swift */,
 				9366C1CB1CBD3C480071508A /* DetailContractTableViewCell.swift */,
@@ -313,6 +316,7 @@
 				9366C1CC1CBD3C480071508A /* DetailContractTableViewCell.swift in Sources */,
 				9337CAB81CBA91180073C82C /* ContractListVC.swift in Sources */,
 				674326291CBB400800312DDC /* ForWhatVC.swift in Sources */,
+				67AF22491CBE94F900E155DA /* ForWhatTableViewCell.swift in Sources */,
 				93DC6B081CBBF8AE00482933 /* AboutVC.swift in Sources */,
 				9382CB251CBBF4A40011569D /* FavoriteContractsVC.swift in Sources */,
 				93054AE71CBA7B6D0050D185 /* AppDelegate.swift in Sources */,
