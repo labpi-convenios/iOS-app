@@ -12,7 +12,7 @@ class DetailContractTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var proponentLabel: UILabel!
+    @IBOutlet weak var proponentLabel: UITextView!
     @IBOutlet weak var transferValue: UILabel!
     @IBOutlet weak var descriptionText: UITextView!
     @IBOutlet weak var goalText: UITextView!

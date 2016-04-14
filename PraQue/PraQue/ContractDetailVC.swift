@@ -183,7 +183,7 @@ class ContractDetailVC: UIViewController, UINavigationControllerDelegate, UITabl
         case 1:
             height = 50
         case 2:
-            height = 50
+            height = 80
         case 3:
             height = 50
         case 4:
