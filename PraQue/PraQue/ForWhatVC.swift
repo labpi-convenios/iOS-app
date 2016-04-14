@@ -16,10 +16,6 @@ class ForWhatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    @IBAction func doneButton(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
-    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }

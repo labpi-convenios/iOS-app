@@ -508,11 +508,6 @@
                                                 <action selector="cancelButton:" destination="i5Z-OI-aaV" id="0Ic-Lo-i8f"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="w8N-gJ-PsA">
-                                            <connections>
-                                                <action selector="doneButton:" destination="i5Z-OI-aaV" id="XA6-GF-BdY"/>
-                                            </connections>
-                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
