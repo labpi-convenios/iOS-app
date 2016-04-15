@@ -1,9 +1,11 @@
 # iOS-app
 Projeto iOS do hackathon - ministério da justiça
 
-Passo a passo para instalar o IPA em dipositivo Apple
+Passo a passo para instalar o protótipo em dipositivo Apple
 
-1 - Conecte seu dispositivo (otimizado para iPhone 5 e 6) ao Macbook
+1 - Baixe o arquivo "PraQue.IPA"
+
+2 - Conecte seu dispositivo ao Macbook
 
 2 - Abra o iTunes no Macbook
 
