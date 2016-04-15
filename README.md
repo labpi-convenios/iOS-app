@@ -1,5 +1,8 @@
-# iOS-app
-Projeto iOS do hackathon - ministério da justiça
+# Protótipo Funcional: Android
+
+Este é um protótipo funcional que tem como finalidade demonstrar a viabilidade da utilização de dados de Convênios e Propostas em um aplicativo de participação social e combate à corrupcão. Submetido em participaçãp à hackathon do Ministério da Justiça (2016).
+
+## Executando o projeto
 
 Passo a passo para instalar o protótipo em dipositivo Apple
 
@@ -22,5 +25,6 @@ Passo a passo para instalar o protótipo em dipositivo Apple
 7 - No canto inferior direito, clique no botão Sync
 
 
-Video de explicação de instalação do protótipo atravé sdo aquivo IPA 
-https://www.youtube.com/watch?v=jnVjk3jz5h8
+## Mais sobre o projeto
+
+Fizemos um [vídeo](https://www.youtube.com/watch?v=MeXjcsEGn9A) que ajuda a entender nossa proposta. 
