@@ -1,4 +1,4 @@
-# Protótipo Funcional: Android
+# Protótipo Funcional: iOS
 
 Este é um protótipo funcional que tem como finalidade demonstrar a viabilidade da utilização de dados de Convênios e Propostas em um aplicativo de participação social e combate à corrupcão. Submetido em participaçãp à hackathon do Ministério da Justiça (2016).
 
